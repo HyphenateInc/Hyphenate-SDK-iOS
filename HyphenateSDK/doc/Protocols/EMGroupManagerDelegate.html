@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>EMGroupManagerDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">HyphenateSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Hyphenate Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/didJoinedGroup:inviter:message:">- didJoinedGroup:inviter:message:</option>
+		
+		<option value="//api/name/didReceiveAcceptedGroupInvitation:invitee:">- didReceiveAcceptedGroupInvitation:invitee:</option>
+		
+		<option value="//api/name/didReceiveAcceptedJoinGroup:">- didReceiveAcceptedJoinGroup:</option>
+		
+		<option value="//api/name/didReceiveDeclinedGroupInvitation:invitee:reason:">- didReceiveDeclinedGroupInvitation:invitee:reason:</option>
+		
+		<option value="//api/name/didReceiveDeclinedJoinGroup:reason:">- didReceiveDeclinedJoinGroup:reason:</option>
+		
+		<option value="//api/name/didReceiveGroupInvitation:inviter:message:">- didReceiveGroupInvitation:inviter:message:</option>
+		
+		<option value="//api/name/didReceiveJoinGroupApplication:applicant:reason:">- didReceiveJoinGroupApplication:applicant:reason:</option>
+		
+		<option value="//api/name/didReceiveLeavedGroup:reason:">- didReceiveLeavedGroup:reason:</option>
+		
+		<option value="//api/name/didUpdateGroupList:">- didUpdateGroupList:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">EMGroupManagerDelegate Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>EMGroupManagerDelegate.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Callbacks of group</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/didReceiveGroupInvitation:inviter:message:" title="didReceiveGroupInvitation:inviter:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didReceiveGroupInvitation:inviter:message:">&ndash;&nbsp;didReceiveGroupInvitation:inviter:message:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>After user A invites user B into the group, user B will receive this callback</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didReceiveGroupInvitation:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aInviter</em> message:(NSString *)<em>aMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>The group ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aInviter</code></th>
+						<td><p>Inviter</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Invite message</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>After user A invites user B into the group, user B will receive this callback</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didReceiveAcceptedGroupInvitation:invitee:" title="didReceiveAcceptedGroupInvitation:invitee:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didReceiveAcceptedGroupInvitation:invitee:">&ndash;&nbsp;didReceiveAcceptedGroupInvitation:invitee:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>After user B accepted user A‘s group invitation, user A will receive this callback</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didReceiveAcceptedGroupInvitation:(EMGroup *)<em>aGroup</em> invitee:(NSString *)<em>aInvitee</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroup</code></th>
+						<td><p>User joined group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aInvitee</code></th>
+						<td><p>Invitee</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>After user B accepted user A‘s group invitation, user A will receive this callback</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didReceiveDeclinedGroupInvitation:invitee:reason:" title="didReceiveDeclinedGroupInvitation:invitee:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didReceiveDeclinedGroupInvitation:invitee:reason:">&ndash;&nbsp;didReceiveDeclinedGroupInvitation:invitee:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>After user B declined user A&rsquo;s group invitation, user A will receive the callback</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didReceiveDeclinedGroupInvitation:(EMGroup *)<em>aGroup</em> invitee:(NSString *)<em>aInvitee</em> reason:(NSString *)<em>aReason</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroup</code></th>
+						<td><p>Group instance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aInvitee</code></th>
+						<td><p>Invitee</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aReason</code></th>
+						<td><p>Decline reason</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>After user B declined user A&rsquo;s group invitation, user A will receive the callback</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didJoinedGroup:inviter:message:" title="didJoinedGroup:inviter:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didJoinedGroup:inviter:message:">&ndash;&nbsp;didJoinedGroup:inviter:message:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>User B will receive this callback after SDK automatically accept user A&rsquo;s group invitation, need set EMOptions&rsquo;s isAutoAcceptGroupInvitation property to YES</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didJoinedGroup:(EMGroup *)<em>aGroup</em> inviter:(NSString *)<em>aInviter</em> message:(NSString *)<em>aMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroup</code></th>
+						<td><p>Group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aInviter</code></th>
+						<td><p>Inviter</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Invite message</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>User B will receive this callback after SDK automatically accept user A&rsquo;s group invitation, need set EMOptions&rsquo;s isAutoAcceptGroupInvitation property to YES</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didReceiveLeavedGroup:reason:" title="didReceiveLeavedGroup:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didReceiveLeavedGroup:reason:">&ndash;&nbsp;didReceiveLeavedGroup:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback of leave group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didReceiveLeavedGroup:(EMGroup *)<em>aGroup</em> reason:(EMGroupLeaveReason)<em>aReason</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroup</code></th>
+						<td><p>Group instance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aReason</code></th>
+						<td><p>Leave reason</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Callback of leave group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didReceiveJoinGroupApplication:applicant:reason:" title="didReceiveJoinGroupApplication:applicant:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didReceiveJoinGroupApplication:applicant:reason:">&ndash;&nbsp;didReceiveJoinGroupApplication:applicant:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Group&rsquo;s owner receive user&rsquo;s applicaton of joining group, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didReceiveJoinGroupApplication:(EMGroup *)<em>aGroup</em> applicant:(NSString *)<em>aApplicant</em> reason:(NSString *)<em>aReason</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroup</code></th>
+						<td><p>Group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aApplicant</code></th>
+						<td><p>The applicant</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aReason</code></th>
+						<td><p>The applicant&rsquo;s message</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Group&rsquo;s owner receive user&rsquo;s applicaton of joining group, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didReceiveDeclinedJoinGroup:reason:" title="didReceiveDeclinedJoinGroup:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didReceiveDeclinedJoinGroup:reason:">&ndash;&nbsp;didReceiveDeclinedJoinGroup:reason:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>User A will receive this callback after group&rsquo;s owner declined it&rsquo;s application, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didReceiveDeclinedJoinGroup:(NSString *)<em>aGroupId</em> reason:(NSString *)<em>aReason</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aReason</code></th>
+						<td><p>Decline reason</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>User A will receive this callback after group&rsquo;s owner declined it&rsquo;s application, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didReceiveAcceptedJoinGroup:" title="didReceiveAcceptedJoinGroup:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didReceiveAcceptedJoinGroup:">&ndash;&nbsp;didReceiveAcceptedJoinGroup:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>User A will receive this callback after group&rsquo;s owner accepted it&rsquo;s application, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didReceiveAcceptedJoinGroup:(EMGroup *)<em>aGroup</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroup</code></th>
+						<td><p>Group instance</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>User A will receive this callback after group&rsquo;s owner accepted it&rsquo;s application, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didUpdateGroupList:" title="didUpdateGroupList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didUpdateGroupList:">&ndash;&nbsp;didUpdateGroupList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Group List changed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didUpdateGroupList:(NSArray *)<em>aGroupList</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupList</code></th>
+						<td><p>Group list<a href="../Classes/EMGroup.html">EMGroup</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Group List changed</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMGroupManagerDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

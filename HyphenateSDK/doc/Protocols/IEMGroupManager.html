@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>IEMGroupManager Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">HyphenateSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Hyphenate Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
+		
+		<option value="//api/name/asyncAcceptInvitationFromGroup:inviter:success:failure:">- asyncAcceptInvitationFromGroup:inviter:success:failure:</option>
+		
+		<option value="//api/name/asyncAcceptJoinApplication:applicant:success:failure:">- asyncAcceptJoinApplication:applicant:success:failure:</option>
+		
+		<option value="//api/name/asyncAddOccupants:toGroup:welcomeMessage:success:failure:">- asyncAddOccupants:toGroup:welcomeMessage:success:failure:</option>
+		
+		<option value="//api/name/asyncApplyJoinPublicGroup:message:success:failure:">- asyncApplyJoinPublicGroup:message:success:failure:</option>
+		
+		<option value="//api/name/asyncBlockGroup:success:failure:">- asyncBlockGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncBlockOccupants:fromGroup:success:failure:">- asyncBlockOccupants:fromGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncChangeDescription:forGroup:success:failure:">- asyncChangeDescription:forGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncChangeGroupSubject:forGroup:success:failure:">- asyncChangeGroupSubject:forGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncCreateGroupWithSubject:description:invitees:message:setting:success:failure:">- asyncCreateGroupWithSubject:description:invitees:message:setting:success:failure:</option>
+		
+		<option value="//api/name/asyncDeclineInvitationFromGroup:inviter:reason:success:failure:">- asyncDeclineInvitationFromGroup:inviter:reason:success:failure:</option>
+		
+		<option value="//api/name/asyncDeclineJoinApplication:applicant:reason:success:failure:">- asyncDeclineJoinApplication:applicant:reason:success:failure:</option>
+		
+		<option value="//api/name/asyncDestroyGroup:success:failure:">- asyncDestroyGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncFetchGroupBansList:success:failure:">- asyncFetchGroupBansList:success:failure:</option>
+		
+		<option value="//api/name/asyncFetchGroupInfo:includeMembersList:success:failure:">- asyncFetchGroupInfo:includeMembersList:success:failure:</option>
+		
+		<option value="//api/name/asyncGetMyGroupsFromServer:failure:">- asyncGetMyGroupsFromServer:failure:</option>
+		
+		<option value="//api/name/asyncGetPublicGroupsFromServerWithCursor:pageSize:success:failure:">- asyncGetPublicGroupsFromServerWithCursor:pageSize:success:failure:</option>
+		
+		<option value="//api/name/asyncIgnoreGroupPush:ignore:success:failure:">- asyncIgnoreGroupPush:ignore:success:failure:</option>
+		
+		<option value="//api/name/asyncJoinPublicGroup:success:failure:">- asyncJoinPublicGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncLeaveGroup:success:failure:">- asyncLeaveGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncRemoveOccupants:fromGroup:success:failure:">- asyncRemoveOccupants:fromGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncSearchPublicGroupWithId:success:failure:">- asyncSearchPublicGroupWithId:success:failure:</option>
+		
+		<option value="//api/name/asyncUnblockGroup:success:failure:">- asyncUnblockGroup:success:failure:</option>
+		
+		<option value="//api/name/asyncUnblockOccupants:forGroup:success:failure:">- asyncUnblockOccupants:forGroup:success:failure:</option>
+		
+		<option value="//api/name/getAllGroups">- getAllGroups</option>
+		
+		<option value="//api/name/getAllIgnoredGroupIds">- getAllIgnoredGroupIds</option>
+		
+		<option value="//api/name/loadAllMyGroupsFromDB">- loadAllMyGroupsFromDB</option>
+		
+		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">IEMGroupManager Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>IEMGroupManager.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Group operations</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/addDelegate:delegateQueue:" title="addDelegate:delegateQueue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:delegateQueue:">&ndash;&nbsp;addDelegate:delegateQueue:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMGroupManagerDelegate&gt;)<em>aDelegate</em> delegateQueue:(dispatch_queue_t)<em>aQueue</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aQueue</code></th>
+						<td><p>The queue of call delegate method</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeDelegate:(id)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllGroups" title="getAllGroups"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllGroups">&ndash;&nbsp;getAllGroups</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all groups, will load from DB if not exist in memory</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getAllGroups</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group list<a href="../Classes/EMGroup.html">EMGroup</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all groups, will load from DB if not exist in memory</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadAllMyGroupsFromDB" title="loadAllMyGroupsFromDB"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadAllMyGroupsFromDB">&ndash;&nbsp;loadAllMyGroupsFromDB</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Load all groups from DB, will update group list in memory after loading</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)loadAllMyGroupsFromDB</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group list<a href="../Classes/EMGroup.html">EMGroup</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Load all groups from DB, will update group list in memory after loading</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllIgnoredGroupIds" title="getAllIgnoredGroupIds"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllIgnoredGroupIds">&ndash;&nbsp;getAllIgnoredGroupIds</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get ID list of groups which block push from memory</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getAllIgnoredGroupIds</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group id list<NSString></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get ID list of groups which block push from memory</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncGetMyGroupsFromServer:failure:" title="asyncGetMyGroupsFromServer:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncGetMyGroupsFromServer:failure:">&ndash;&nbsp;asyncGetMyGroupsFromServer:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all of user&rsquo;s groups from server, will update group list in memory and DB after success</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncGetMyGroupsFromServer:(void ( ^ ) ( NSArray *aList ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all of user&rsquo;s groups from server, will update group list in memory and DB after success</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncGetPublicGroupsFromServerWithCursor:pageSize:success:failure:" title="asyncGetPublicGroupsFromServerWithCursor:pageSize:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncGetPublicGroupsFromServerWithCursor:pageSize:success:failure:">&ndash;&nbsp;asyncGetPublicGroupsFromServerWithCursor:pageSize:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get public groups in the specified range from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncGetPublicGroupsFromServerWithCursor:(NSString *)<em>aCursor</em> pageSize:(NSInteger)<em>aPageSize</em> success:(void ( ^ ) ( EMCursorResult *aCursor ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCursor</code></th>
+						<td><p>Cursor, input nil the first time</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Expect result count, will return all results if &lt; 0</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get public groups in the specified range from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncSearchPublicGroupWithId:success:failure:" title="asyncSearchPublicGroupWithId:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncSearchPublicGroupWithId:success:failure:">&ndash;&nbsp;asyncSearchPublicGroupWithId:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Search public group with the id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncSearchPublicGroupWithId:(NSString *)<em>aGroundId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroundId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Search public group with the id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncCreateGroupWithSubject:description:invitees:message:setting:success:failure:" title="asyncCreateGroupWithSubject:description:invitees:message:setting:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncCreateGroupWithSubject:description:invitees:message:setting:success:failure:">&ndash;&nbsp;asyncCreateGroupWithSubject:description:invitees:message:setting:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Create a group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncCreateGroupWithSubject:(NSString *)<em>aSubject</em> description:(NSString *)<em>aDescription</em> invitees:(NSArray *)<em>aInvitees</em> message:(NSString *)<em>aMessage</em> setting:(EMGroupOptions *)<em>aSetting</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSubject</code></th>
+						<td><p>Group subject</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDescription</code></th>
+						<td><p>Group description</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aInvitees</code></th>
+						<td><p>Group members, without creater</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Invitation message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSetting</code></th>
+						<td><p>Group options</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Create a group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncFetchGroupInfo:includeMembersList:success:failure:" title="asyncFetchGroupInfo:includeMembersList:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncFetchGroupInfo:includeMembersList:success:failure:">&ndash;&nbsp;asyncFetchGroupInfo:includeMembersList:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch group info</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncFetchGroupInfo:(NSString *)<em>aGroupId</em> includeMembersList:(BOOL)<em>aIncludeMembersList</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIncludeMembersList</code></th>
+						<td><p>Whether get member list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch group info</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncFetchGroupBansList:success:failure:" title="asyncFetchGroupBansList:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncFetchGroupBansList:success:failure:">&ndash;&nbsp;asyncFetchGroupBansList:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get group‘s blacklist, need owner’s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncFetchGroupBansList:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( NSArray *aList ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get group‘s blacklist, need owner’s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncAddOccupants:toGroup:welcomeMessage:success:failure:" title="asyncAddOccupants:toGroup:welcomeMessage:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncAddOccupants:toGroup:welcomeMessage:success:failure:">&ndash;&nbsp;asyncAddOccupants:toGroup:welcomeMessage:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Invite User to join a group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncAddOccupants:(NSArray *)<em>aOccupants</em> toGroup:(NSString *)<em>aGroupId</em> welcomeMessage:(NSString *)<em>aWelcomeMessage</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aOccupants</code></th>
+						<td><p>Invited users</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aWelcomeMessage</code></th>
+						<td><p>Welcome message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Invite User to join a group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncRemoveOccupants:fromGroup:success:failure:" title="asyncRemoveOccupants:fromGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncRemoveOccupants:fromGroup:success:failure:">&ndash;&nbsp;asyncRemoveOccupants:fromGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove members from group, need owner‘s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncRemoveOccupants:(NSArray *)<em>aOccupants</em> fromGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aOccupants</code></th>
+						<td><p>Users to be removed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove members from group, need owner‘s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncBlockOccupants:fromGroup:success:failure:" title="asyncBlockOccupants:fromGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncBlockOccupants:fromGroup:success:failure:">&ndash;&nbsp;asyncBlockOccupants:fromGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add users to group’s blacklist, need owner‘s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncBlockOccupants:(NSArray *)<em>aOccupants</em> fromGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aOccupants</code></th>
+						<td><p>Users to be added</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add users to group’s blacklist, need owner‘s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncUnblockOccupants:forGroup:success:failure:" title="asyncUnblockOccupants:forGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncUnblockOccupants:forGroup:success:failure:">&ndash;&nbsp;asyncUnblockOccupants:forGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove users from group‘s blacklist, need owner‘s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncUnblockOccupants:(NSArray *)<em>aOccupants</em> forGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aOccupants</code></th>
+						<td><p>Users to be removed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove users from group‘s blacklist, need owner‘s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncChangeGroupSubject:forGroup:success:failure:" title="asyncChangeGroupSubject:forGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncChangeGroupSubject:forGroup:success:failure:">&ndash;&nbsp;asyncChangeGroupSubject:forGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Change group’s subject, need owner‘s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncChangeGroupSubject:(NSString *)<em>aSubject</em> forGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSubject</code></th>
+						<td><p>New group‘s subject</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Change group’s subject, need owner‘s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncChangeDescription:forGroup:success:failure:" title="asyncChangeDescription:forGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncChangeDescription:forGroup:success:failure:">&ndash;&nbsp;asyncChangeDescription:forGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Change group’s description, need owner‘s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncChangeDescription:(NSString *)<em>aDescription</em> forGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDescription</code></th>
+						<td><p>New group‘s description</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Change group’s description, need owner‘s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncLeaveGroup:success:failure:" title="asyncLeaveGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncLeaveGroup:success:failure:">&ndash;&nbsp;asyncLeaveGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Leave a group, owner can&rsquo;t leave the group, can only destroy the group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncLeaveGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Leave a group, owner can&rsquo;t leave the group, can only destroy the group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncDestroyGroup:success:failure:" title="asyncDestroyGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncDestroyGroup:success:failure:">&ndash;&nbsp;asyncDestroyGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Destroy a group, need owner‘s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncDestroyGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Destroy a group, need owner‘s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncBlockGroup:success:failure:" title="asyncBlockGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncBlockGroup:success:failure:">&ndash;&nbsp;asyncBlockGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Block group’s message, server will blocks the messages of the group to user, owner can&rsquo;t block the group&rsquo;s message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncBlockGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Block group’s message, server will blocks the messages of the group to user, owner can&rsquo;t block the group&rsquo;s message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncUnblockGroup:success:failure:" title="asyncUnblockGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncUnblockGroup:success:failure:">&ndash;&nbsp;asyncUnblockGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unblock group message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncUnblockGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Unblock group message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncJoinPublicGroup:success:failure:" title="asyncJoinPublicGroup:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncJoinPublicGroup:success:failure:">&ndash;&nbsp;asyncJoinPublicGroup:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Join a public group, group style should be EMGroupStylePublicOpenJoin</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncJoinPublicGroup:(NSString *)<em>aGroupId</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Public group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Join a public group, group style should be EMGroupStylePublicOpenJoin</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncApplyJoinPublicGroup:message:success:failure:" title="asyncApplyJoinPublicGroup:message:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncApplyJoinPublicGroup:message:success:failure:">&ndash;&nbsp;asyncApplyJoinPublicGroup:message:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Apply to join a public group, group style should be EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncApplyJoinPublicGroup:(NSString *)<em>aGroupId</em> message:(NSString *)<em>aMessage</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Public group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Apply info</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Apply to join a public group, group style should be EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncAcceptJoinApplication:applicant:success:failure:" title="asyncAcceptJoinApplication:applicant:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncAcceptJoinApplication:applicant:success:failure:">&ndash;&nbsp;asyncAcceptJoinApplication:applicant:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Accept user&rsquo;s application, need owner‘s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncAcceptJoinApplication:(NSString *)<em>aGroupId</em> applicant:(NSString *)<em>aUsername</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The applicant</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Accept user&rsquo;s application, need owner‘s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncDeclineJoinApplication:applicant:reason:success:failure:" title="asyncDeclineJoinApplication:applicant:reason:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncDeclineJoinApplication:applicant:reason:success:failure:">&ndash;&nbsp;asyncDeclineJoinApplication:applicant:reason:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decline user&rsquo;s application, need owner‘s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncDeclineJoinApplication:(NSString *)<em>aGroupId</em> applicant:(NSString *)<em>aUsername</em> reason:(NSString *)<em>aReason</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The applicant</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aReason</code></th>
+						<td><p>Decline reason</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Decline user&rsquo;s application, need owner‘s authority</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncAcceptInvitationFromGroup:inviter:success:failure:" title="asyncAcceptInvitationFromGroup:inviter:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncAcceptInvitationFromGroup:inviter:success:failure:">&ndash;&nbsp;asyncAcceptInvitationFromGroup:inviter:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Accept group&rsquo;s invitation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncAcceptInvitationFromGroup:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aUsername</em> success:(void ( ^ ) ( EMGroup *aGroup ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Inviter</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Accept group&rsquo;s invitation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncDeclineInvitationFromGroup:inviter:reason:success:failure:" title="asyncDeclineInvitationFromGroup:inviter:reason:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncDeclineInvitationFromGroup:inviter:reason:success:failure:">&ndash;&nbsp;asyncDeclineInvitationFromGroup:inviter:reason:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decline a group invitation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncDeclineInvitationFromGroup:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aUsername</em> reason:(NSString *)<em>aReason</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Inviter</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aReason</code></th>
+						<td><p>Decline reason</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Decline a group invitation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncIgnoreGroupPush:ignore:success:failure:" title="asyncIgnoreGroupPush:ignore:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncIgnoreGroupPush:ignore:success:failure:">&ndash;&nbsp;asyncIgnoreGroupPush:ignore:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Block / unblock group message‘s push notification</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncIgnoreGroupPush:(NSString *)<em>aGroupId</em> ignore:(BOOL)<em>aIsIgnore</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIgnore</code></th>
+						<td><p>Whether block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Block / unblock group message‘s push notification</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

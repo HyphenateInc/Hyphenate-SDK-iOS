@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>IEMChatManager Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">HyphenateSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Hyphenate Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
+		
+		<option value="//api/name/asyncDownloadMessageAttachments:progress:completion:">- asyncDownloadMessageAttachments:progress:completion:</option>
+		
+		<option value="//api/name/asyncDownloadMessageThumbnail:progress:completion:">- asyncDownloadMessageThumbnail:progress:completion:</option>
+		
+		<option value="//api/name/asyncResendMessage:progress:completion:">- asyncResendMessage:progress:completion:</option>
+		
+		<option value="//api/name/asyncSendMessage:progress:completion:">- asyncSendMessage:progress:completion:</option>
+		
+		<option value="//api/name/asyncSendReadAckForMessage:">- asyncSendReadAckForMessage:</option>
+		
+		<option value="//api/name/deleteConversation:deleteMessages:">- deleteConversation:deleteMessages:</option>
+		
+		<option value="//api/name/deleteConversations:deleteMessages:">- deleteConversations:deleteMessages:</option>
+		
+		<option value="//api/name/getAllConversations">- getAllConversations</option>
+		
+		<option value="//api/name/getConversation:type:createIfNotExist:">- getConversation:type:createIfNotExist:</option>
+		
+		<option value="//api/name/getMessageAttachmentPath:">- getMessageAttachmentPath:</option>
+		
+		<option value="//api/name/importConversations:">- importConversations:</option>
+		
+		<option value="//api/name/importMessages:">- importMessages:</option>
+		
+		<option value="//api/name/loadAllConversationsFromDB">- loadAllConversationsFromDB</option>
+		
+		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/updateMessage:">- updateMessage:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">IEMChatManager Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>IEMChatManager.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Operations of chat</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/addDelegate:delegateQueue:" title="addDelegate:delegateQueue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:delegateQueue:">&ndash;&nbsp;addDelegate:delegateQueue:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMChatManagerDelegate&gt;)<em>aDelegate</em> delegateQueue:(dispatch_queue_t)<em>aQueue</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aQueue</code></th>
+						<td><p>The queue of call delegate method</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeDelegate:(id&lt;EMChatManagerDelegate&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllConversations" title="getAllConversations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllConversations">&ndash;&nbsp;getAllConversations</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all conversations, will load conversations from DB if not exist in memory</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getAllConversations</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Conversation list<a href="../Classes/EMConversation.html">EMConversation</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all conversations, will load conversations from DB if not exist in memory</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadAllConversationsFromDB" title="loadAllConversationsFromDB"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadAllConversationsFromDB">&ndash;&nbsp;loadAllConversationsFromDB</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Load all conversations from DB, will update conversation list in memory after this method is called</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)loadAllConversationsFromDB</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Conversation list<a href="../Classes/EMConversation.html">EMConversation</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Load all conversations from DB, will update conversation list in memory after this method is called</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getConversation:type:createIfNotExist:" title="getConversation:type:createIfNotExist:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getConversation:type:createIfNotExist:">&ndash;&nbsp;getConversation:type:createIfNotExist:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get a conversation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMConversation *)getConversation:(NSString *)<em>aConversationId</em> type:(EMConversationType)<em>aType</em> createIfNotExist:(BOOL)<em>aIfCreate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aConversationId</code></th>
+						<td><p>Conversation id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aType</code></th>
+						<td><p>Conversation type</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIfCreate</code></th>
+						<td><p>Whether create conversation if not exist</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Conversation</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get a conversation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteConversation:deleteMessages:" title="deleteConversation:deleteMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteConversation:deleteMessages:">&ndash;&nbsp;deleteConversation:deleteMessages:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delete a conversation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)deleteConversation:(NSString *)<em>aConversationId</em> deleteMessages:(BOOL)<em>aDeleteMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aConversationId</code></th>
+						<td><p>Conversation id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDeleteMessage</code></th>
+						<td><p>Whether delete messages</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether deleted successfully</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delete a conversation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteConversations:deleteMessages:" title="deleteConversations:deleteMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteConversations:deleteMessages:">&ndash;&nbsp;deleteConversations:deleteMessages:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delete multiple conversations</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)deleteConversations:(NSArray *)<em>aConversations</em> deleteMessages:(BOOL)<em>aDeleteMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aConversations</code></th>
+						<td><p>Conversation list<a href="../Classes/EMConversation.html">EMConversation</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDeleteMessage</code></th>
+						<td><p>Whether delete messages</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether deleted successfully</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delete multiple conversations</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/importConversations:" title="importConversations:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/importConversations:">&ndash;&nbsp;importConversations:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Import multiple conversations to DB</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)importConversations:(NSArray *)<em>aConversations</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aConversations</code></th>
+						<td><p>Conversation list<a href="../Classes/EMConversation.html">EMConversation</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether imported successfully</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Import multiple conversations to DB</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getMessageAttachmentPath:" title="getMessageAttachmentPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getMessageAttachmentPath:">&ndash;&nbsp;getMessageAttachmentPath:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get message attachment path for the conversation, files in this path will also be deleted when delete the conversation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getMessageAttachmentPath:(NSString *)<em>aConversationId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aConversationId</code></th>
+						<td><p>Conversation id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Attachment path</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get message attachment path for the conversation, files in this path will also be deleted when delete the conversation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/importMessages:" title="importMessages:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/importMessages:">&ndash;&nbsp;importMessages:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Import multiple messages</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)importMessages:(NSArray *)<em>aMessages</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessages</code></th>
+						<td><p>Message list<a href="../Classes/EMMessage.html">EMMessage</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether imported successfully</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Import multiple messages</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateMessage:" title="updateMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateMessage:">&ndash;&nbsp;updateMessage:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update message to DB</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)updateMessage:(EMMessage *)<em>aMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether updated successfully</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update message to DB</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncSendReadAckForMessage:" title="asyncSendReadAckForMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncSendReadAckForMessage:">&ndash;&nbsp;asyncSendReadAckForMessage:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send read ack for message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncSendReadAckForMessage:(EMMessage *)<em>aMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message instance</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Send read ack for message</p>
+
+<p>Asynchronous methods</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncSendMessage:progress:completion:" title="asyncSendMessage:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncSendMessage:progress:completion:">&ndash;&nbsp;asyncSendMessage:progress:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send a message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncSendMessage:(EMMessage *)<em>aMessage</em> progress:(void ( ^ ) ( int progress ))<em>aProgressCompletion</em> completion:(void ( ^ ) ( EMMessage *message , EMError *error ))<em>aCompletion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message instance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aProgressCompletion</code></th>
+						<td><p>The block of attachment upload progress</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletion</code></th>
+						<td><p>The block of send complete</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Send a message</p>
+
+<p>Asynchronous methods</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncResendMessage:progress:completion:" title="asyncResendMessage:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncResendMessage:progress:completion:">&ndash;&nbsp;asyncResendMessage:progress:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Resend Message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncResendMessage:(EMMessage *)<em>aMessage</em> progress:(void ( ^ ) ( int progress ))<em>aProgressCompletion</em> completion:(void ( ^ ) ( EMMessage *message , EMError *error ))<em>aCompletion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message instance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aProgressCompletion</code></th>
+						<td><p>The callback block of attachment upload progress</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletion</code></th>
+						<td><p>The callback block of send complete</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Resend Message</p>
+
+<p>Asynchronous methods</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncDownloadMessageThumbnail:progress:completion:" title="asyncDownloadMessageThumbnail:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncDownloadMessageThumbnail:progress:completion:">&ndash;&nbsp;asyncDownloadMessageThumbnail:progress:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Download message thumbnail attachments (thumbnails of image message or first frame of video image), SDK can download thumbail automatically, so user should NOT download thumbail manually except automatic download failed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncDownloadMessageThumbnail:(EMMessage *)<em>aMessage</em> progress:(void ( ^ ) ( int progress ))<em>aProgressCompletion</em> completion:(void ( ^ ) ( EMMessage *message , EMError *error ))<em>aCompletion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message instance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aProgressCompletion</code></th>
+						<td><p>The callback block of attachment download progress</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletion</code></th>
+						<td><p>The callback block of download complete</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Download message thumbnail attachments (thumbnails of image message or first frame of video image), SDK can download thumbail automatically, so user should NOT download thumbail manually except automatic download failed</p>
+
+<p>Asynchronous methods</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncDownloadMessageAttachments:progress:completion:" title="asyncDownloadMessageAttachments:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncDownloadMessageAttachments:progress:completion:">&ndash;&nbsp;asyncDownloadMessageAttachments:progress:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Download message attachment(voice, video, image or file), SDK can download voice automatically, so user should NOT download voice manually except automatic download failed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncDownloadMessageAttachments:(EMMessage *)<em>aMessage</em> progress:(void ( ^ ) ( int progress ))<em>aProgressCompletion</em> completion:(void ( ^ ) ( EMMessage *message , EMError *error ))<em>aCompletion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message instance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aProgressCompletion</code></th>
+						<td><p>The callback block of attachment download progress</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletion</code></th>
+						<td><p>The callback block of download complete</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Download message attachment(voice, video, image or file), SDK can download voice automatically, so user should NOT download voice manually except automatic download failed</p>
+
+<p>Asynchronous methods</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
