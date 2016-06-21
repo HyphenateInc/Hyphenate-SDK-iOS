@@ -1,8 +1,8 @@
-# sdk_release_ios
-- doc folder: includes documentation for the SDK related API.
-- HyphenateFullSDK folder: includes the SDK and .so files which provide the read-time speech and video function.
-- HyphenateSDK folder: contains the SDK which cannot provide the real-time speech and video function.
+# Hyphenate-SDK-iOS
+- doc folder: SDK documentation.
+- HyphenateFull-SDK folder: Common features + video/audio calling.
+- HyphenateSDK folder: Common features.
 
-Demo src github link: [https://github.com/HyphenateInc/IMDemo_ios](https://github.com/HyphenateInc/IMDemo_ios "IMDemo")
+Demo src github link: [https://github.com/HyphenateInc/Hyphenate-Demo-iOS](https://github.com/HyphenateInc/Hyphenate-Demo-iOS "IMDemo")
 
-Demo is dependent on EaseUI library project, EaseUI src github link:[https://github.com/HyphenateInc/easeui_ios](https://github.com/HyphenateInc/easeui_ios "EaseUI")
+Demo is dependent on EaseUI library project, EaseUI src github link:[https://github.com/HyphenateInc/Hyphenate-EaseUI-iOS](https://github.com/HyphenateInc/Hyphenate-EaseUI-iOS "EaseUI")
