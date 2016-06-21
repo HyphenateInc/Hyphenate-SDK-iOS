@@ -3,6 +3,6 @@
 - HyphenateFull-SDK folder: Common features + video/audio calling.
 - HyphenateSDK folder: Common features.
 
-Demo src github link: [https://github.com/HyphenateInc/Hyphenate-Demo-iOS](https://github.com/HyphenateInc/Hyphenate-Demo-iOS "IMDemo")
+iOS Demo: [https://github.com/HyphenateInc/Hyphenate-Demo-iOS](https://github.com/HyphenateInc/Hyphenate-Demo-iOS "IMDemo")
 
-Demo is dependent on EaseUI library project, EaseUI src github link:[https://github.com/HyphenateInc/Hyphenate-EaseUI-iOS](https://github.com/HyphenateInc/Hyphenate-EaseUI-iOS "EaseUI")
+iOS Demo is dependending on EaseUI library:[https://github.com/HyphenateInc/Hyphenate-EaseUI-iOS](https://github.com/HyphenateInc/Hyphenate-EaseUI-iOS "EaseUI")
