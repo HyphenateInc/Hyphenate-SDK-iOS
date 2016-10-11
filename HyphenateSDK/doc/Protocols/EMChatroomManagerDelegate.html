@@ -60,11 +60,11 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/didReceiveKickedFromChatroom:reason:">- didReceiveKickedFromChatroom:reason:</option>
+		<option value="//api/name/didDismissFromChatroom:reason:">- didDismissFromChatroom:reason:</option>
 		
-		<option value="//api/name/didReceiveUserJoinedChatroom:username:">- didReceiveUserJoinedChatroom:username:</option>
+		<option value="//api/name/userDidJoinChatroom:user:">- userDidJoinChatroom:user:</option>
 		
-		<option value="//api/name/didReceiveUserLeavedChatroom:username:">- didReceiveUserLeavedChatroom:username:</option>
+		<option value="//api/name/userDidLeaveChatroom:user:">- userDidLeaveChatroom:user:</option>
 		
 	</optgroup>
 	
@@ -116,8 +116,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/didReceiveUserJoinedChatroom:username:" title="didReceiveUserJoinedChatroom:username:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveUserJoinedChatroom:username:">&ndash;&nbsp;didReceiveUserJoinedChatroom:username:</a></code>
+	<a name="//api/name/userDidJoinChatroom:user:" title="userDidJoinChatroom:user:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/userDidJoinChatroom:user:">&ndash;&nbsp;userDidJoinChatroom:user:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -127,12 +127,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A user joined chatroom</p>
+				<p>Delegate method will be invoked when a user joins a chatroom.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveUserJoinedChatroom:(EMChatroom *)<em>aChatroom</em> username:(NSString *)<em>aUsername</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)userDidJoinChatroom:(EMChatroom *)<em>aChatroom</em> user:(NSString *)<em>aUsername</em></code></div>
 
 		    
 			
@@ -161,7 +161,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>A user joined chatroom</p>
+				<p>Delegate method will be invoked when a user joins a chatroom.</p>
 			</div>
 			
 
@@ -179,8 +179,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveUserLeavedChatroom:username:" title="didReceiveUserLeavedChatroom:username:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveUserLeavedChatroom:username:">&ndash;&nbsp;didReceiveUserLeavedChatroom:username:</a></code>
+	<a name="//api/name/userDidLeaveChatroom:user:" title="userDidLeaveChatroom:user:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/userDidLeaveChatroom:user:">&ndash;&nbsp;userDidLeaveChatroom:user:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -190,12 +190,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A user leaved chatroom</p>
+				<p>Delegate method will be invoked when a user leaves a chatroom.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveUserLeavedChatroom:(EMChatroom *)<em>aChatroom</em> username:(NSString *)<em>aUsername</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)userDidLeaveChatroom:(EMChatroom *)<em>aChatroom</em> user:(NSString *)<em>aUsername</em></code></div>
 
 		    
 			
@@ -205,7 +205,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aChatroom</code></th>
-						<td><p>Leaved chatroom</p></td>
+						<td><p>Left chatroom</p></td>
 					</tr>
 				
 					<tr>
@@ -224,7 +224,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>A user leaved chatroom</p>
+				<p>Delegate method will be invoked when a user leaves a chatroom.</p>
 			</div>
 			
 
@@ -242,8 +242,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveKickedFromChatroom:reason:" title="didReceiveKickedFromChatroom:reason:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveKickedFromChatroom:reason:">&ndash;&nbsp;didReceiveKickedFromChatroom:reason:</a></code>
+	<a name="//api/name/didDismissFromChatroom:reason:" title="didDismissFromChatroom:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didDismissFromChatroom:reason:">&ndash;&nbsp;didDismissFromChatroom:reason:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -253,12 +253,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User was kicked out from a chatroom</p>
+				<p>Delegate method will be invoked when a user is dismissed from a chat room</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveKickedFromChatroom:(EMChatroom *)<em>aChatroom</em> reason:(EMChatroomBeKickedReason)<em>aReason</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)didDismissFromChatroom:(EMChatroom *)<em>aChatroom</em> reason:(EMChatroomBeKickedReason)<em>aReason</em></code></div>
 
 		    
 			
@@ -268,12 +268,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aChatroom</code></th>
-						<td><p>The chatroom which user was kicked out from</p></td>
+						<td><p>aChatroom</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aReason</code></th>
-						<td><p>The reason of user was kicked out</p></td>
+						<td><p>The reason of dismissing user from the chat room</p></td>
 					</tr>
 				
 				</table>
@@ -287,7 +287,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User was kicked out from a chatroom</p>
+				<p>Delegate method will be invoked when a user is dismissed from a chat room</p>
 			</div>
 			
 
@@ -319,7 +319,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

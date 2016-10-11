@@ -22,11 +22,11 @@
 /*!
  *  Error description
  */
-@property (nonatomic, strong) NSString *errorDescription;
+@property (nonatomic, copy) NSString *errorDescription;
 
 
 /*!
- *  Initialize a error instance
+ *  Initialize an error instance
  *
  *  @param aDescription  Error description
  *  @param aCode         Error code

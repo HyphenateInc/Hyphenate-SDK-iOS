@@ -30,7 +30,7 @@
 @property (nonatomic, copy) NSString *thumbnailRemotePath;
 
 /*!
- *  Secret key of thumbnail, need verify secret key when download thumbnail
+ *  Secret key of thumbnail, required to download a thumbnail
  */
 @property (nonatomic, copy) NSString *thumbnailSecretKey;
 

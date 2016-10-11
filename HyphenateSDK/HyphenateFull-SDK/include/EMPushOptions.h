@@ -1,6 +1,6 @@
 /*!
  *  @header EMPushOptions.h
- *  @abstract Setting options of Apple APNS
+ *  @abstract Setting options of Apple Push Notification
  *  @author Hyphenate
  *  @version 3.00
  */
@@ -19,50 +19,51 @@
  *  Display style of push message
  */
 typedef enum{
-    EMPushDisplayStyleSimpleBanner = 0, /*!
+    EMPushDisplayStyleSimpleBanner = 0, /*! 
                                          *  Simply show "You have a new message"
                                          */
-    EMPushDisplayStyleMessageSummary,   /*!
+    EMPushDisplayStyleMessageSummary,   /*! 
                                          *  Show message's content
                                          */
 }EMPushDisplayStyle;
 
 /*!
- *  Status of APNS no-disturb setting
+ *  Status of Push Notification no-disturb setting
  */
 typedef enum{
-    EMPushNoDisturbStatusDay = 0,   /*! The whole day */
-    EMPushNoDisturbStatusCustom,    /*! User defined period */
-    EMPushNoDisturbStatusClose,     /*! Close no-disturb mode */
+    EMPushNoDisturbStatusDay = 0,   /*!  The whole day */
+    EMPushNoDisturbStatusCustom,    /*!  User defined period */
+    EMPushNoDisturbStatusClose,     /*!  Close no-disturb mode */
 }EMPushNoDisturbStatus;
 
 /*!
- *  Apple APNS setting options
+ *  Apple Push Notification setting options
  */
 @interface EMPushOptions : NSObject
 
 /*!
- *  Nick name to show for push message
+ *  User's nickname to be displayed in apple push notification service messages
  */
-@property (nonatomic, strong) NSString *nickname;
+@property (nonatomic, copy) NSString *nickname __deprecated_msg("Use - displayName");
+@property (nonatomic, copy) NSString *displayName;
 
 /*!
- *  Display style of push message
+ *  Display style of notification message
  */
 @property (nonatomic) EMPushDisplayStyle displayStyle;
 
 /*!
- *  No-disturb setting of push message
+ *  No disturbing setting of notification message
  */
 @property (nonatomic) EMPushNoDisturbStatus noDisturbStatus;
 
 /*!
- *  No-disturn mode start time, only supports hour
+ *  No disturbing mode start time (in hour)
  */
 @property (nonatomic) NSInteger noDisturbingStartH;
 
 /*!
- *  No-disturn mode end time, only supports hour
+ *  No disturbing mode end time (in hour)
  */
 @property (nonatomic) NSInteger noDisturbingEndH;
 

@@ -20,66 +20,68 @@
 @property (nonatomic, copy, readonly) NSString *groupId;
 
 /*!
- *  Group's subject, need to fetch group's specification
+ *  Subject of the group
  */
 @property (nonatomic, copy, readonly) NSString *subject;
 
 /*!
- *  Group's description, need to fetch group's specification
+ *  Description of the group
  */
 @property (nonatomic, copy, readonly) NSString *description;
 
 /*!
- *  The number of members, need to fetch group's specification
+ *  The total number of group members
  */
-@property (nonatomic, readonly) NSInteger occupantsCount;
+@property (nonatomic, readonly) NSInteger occupantsCount __deprecated_msg("Use - membersCount");
+@property (nonatomic, readonly) NSInteger membersCount;
 
 /*!
- *  Group's setting options, need to fetch group's specification
+ *  Setting options of group
  */
 @property (nonatomic, strong, readonly) EMGroupOptions *setting;
 
 /*!
- *  Group‘s owner, has the highest authority, need to fetch group's specification
+ *  Owner of the group
  *
- *  A group only has one owner
+ *  Each group only has one owner
  */
 @property (nonatomic, copy, readonly) NSString *owner;
 
 /*!
- *  Member list of group, need to fetch group's specification
+ *  Member list of the group
  */
 @property (nonatomic, copy, readonly) NSArray *members;
 
 /*!
- *  Group‘s blacklist, need to call fetching group's blacklist method first
+ *  Group‘s blacklist of blocked users
  *
- *  Need owner's authority, will return nil if user is not the owner of the group
+ *  Need owner's authority to access, return nil if user is not the group owner.
  */
-@property (nonatomic, strong, readonly) NSArray *bans;
+@property (nonatomic, strong, readonly) NSArray *bans __deprecated_msg("Use - blackList");
+@property (nonatomic, strong, readonly) NSArray *blackList;
 
 /*!
- *  All occupants of the group, include both the owner and all members
+ *  All occupants of the group, includes the group owner and all other group members
  */
 @property (nonatomic, strong, readonly) NSArray *occupants;
 
 /*!
- *  Whether this group receive push notifications
+ *  Is Apple Push Notification Service enabled for group
  */
 @property (nonatomic, readonly) BOOL isPushNotificationEnabled;
 
 /*!
- *  Whether is public group, need to fetch group's specification
+ *  Whether is a public group
  */
 @property (nonatomic, readonly) BOOL isPublic;
 
 /*!
- *  Whether block this group‘s message
+ *  Whether block the current group‘s messages
  */
 @property (nonatomic, readonly) BOOL isBlocked;
 
 /*!
- *  Initialize group instance
+ *  Initialize a group instance
  *
  *  Please use [+groupWithId:]
  *
@@ -88,9 +90,9 @@
 - (instancetype)init __deprecated_msg("Use +groupWithId:");
 
 /*!
- *  Get group instance, create a instance if do not exist
+ *  Get group instance, create a instance if it does not exist
  *
- *  @param aGroupId    Group id
+ *  @param aGroupId  Group id
  *
  *  @result Group instance
  */

@@ -82,29 +82,29 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/getVideoFramerate">- getVideoFramerate</option>
+		<option value="//api/name/getVideoFrameRate">- getVideoFrameRate</option>
 		
 		<option value="//api/name/getVideoHeight">- getVideoHeight</option>
 		
+		<option value="//api/name/getVideoLatency">- getVideoLatency</option>
+		
 		<option value="//api/name/getVideoLocalBitrate">- getVideoLocalBitrate</option>
 		
-		<option value="//api/name/getVideoLostcnt">- getVideoLostcnt</option>
+		<option value="//api/name/getVideoLostRateInPercent">- getVideoLostRateInPercent</option>
 		
 		<option value="//api/name/getVideoRemoteBitrate">- getVideoRemoteBitrate</option>
-		
-		<option value="//api/name/getVideoTimedelay">- getVideoTimedelay</option>
 		
 		<option value="//api/name/getVideoWidth">- getVideoWidth</option>
 		
 		<option value="//api/name/getVoiceVolume">- getVoiceVolume</option>
 		
-		<option value="//api/name/setCameraBackOrFront:">- setCameraBackOrFront:</option>
+		<option value="//api/name/screenCaptureToFilePath:error:">- screenCaptureToFilePath:error:</option>
 		
-		<option value="//api/name/startVideoRecord:">- startVideoRecord:</option>
+		<option value="//api/name/startVideoRecordingToFilePath:error:">- startVideoRecordingToFilePath:error:</option>
 		
-		<option value="//api/name/stopVideoRecord">- stopVideoRecord</option>
+		<option value="//api/name/stopVideoRecording:">- stopVideoRecording:</option>
 		
-		<option value="//api/name/takeRemotePicture:">- takeRemotePicture:</option>
+		<option value="//api/name/switchCameraPosition:">- switchCameraPosition:</option>
 		
 	</optgroup>
 	
@@ -259,7 +259,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The other side&rsquo;s <a href="#//api/name/username">username</a></p>
+				<p>The other party&rsquo;s <a href="#//api/name/username">username</a></p>
 			</div>
 			
 		    
@@ -276,7 +276,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The other side&rsquo;s <a href="#//api/name/username">username</a></p>
+				<p>The other party&rsquo;s <a href="#//api/name/username">username</a></p>
 			</div>
 			
 
@@ -489,7 +489,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Remote display view</p>
+				<p>The other party&rsquo;s display view</p>
 			</div>
 			
 		    
@@ -506,7 +506,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Remote display view</p>
+				<p>The other party&rsquo;s display view</p>
 			</div>
 			
 
@@ -535,7 +535,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set video bit rate, must set before start the session</p>
+				<p>Video bit rate, must be set before call session is started.</p>
 			</div>
 			
 		    
@@ -552,9 +552,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Set video bit rate, must set before start the session</p>
+				<p>Video bit rate, must be set before call session is started.</p>
 
-<p>Value is 150-1000, the default is 600</p>
+<p>Value range is 150-1000, the default is 600.</p>
 			</div>
 			
 
@@ -583,7 +583,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get voice volume</p>
+				<p>Get voice volume of the call</p>
 			</div>
 			
 		    
@@ -605,7 +605,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get voice volume</p>
+				<p>Get voice volume of the call</p>
 			</div>
 			
 
@@ -623,8 +623,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getVideoTimedelay" title="getVideoTimedelay"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getVideoTimedelay">&ndash;&nbsp;getVideoTimedelay</a></code>
+	<a name="//api/name/getVideoLatency" title="getVideoLatency"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVideoLatency">&ndash;&nbsp;getVideoLatency</a></code>
 </h3>
 
 	<div class="method-info">
@@ -634,12 +634,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get video delay time, in milliseconds, it&rsquo;s real time changed</p>
+				<p>Get video latency, in milliseconds, changing in real time</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (int)getVideoTimedelay</code></div>
+			<div class="method-subsection method-declaration"><code>- (int)getVideoLatency</code></div>
 
 		    
 			
@@ -656,7 +656,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get video delay time, in milliseconds, it&rsquo;s real time changed</p>
+				<p>Get video latency, in milliseconds, changing in real time</p>
 			</div>
 			
 
@@ -674,8 +674,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getVideoFramerate" title="getVideoFramerate"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getVideoFramerate">&ndash;&nbsp;getVideoFramerate</a></code>
+	<a name="//api/name/getVideoFrameRate" title="getVideoFrameRate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVideoFrameRate">&ndash;&nbsp;getVideoFrameRate</a></code>
 </h3>
 
 	<div class="method-info">
@@ -685,12 +685,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get video frame rate, it&rsquo;s real time changed</p>
+				<p>Get video frame rate, changing in real time</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (int)getVideoFramerate</code></div>
+			<div class="method-subsection method-declaration"><code>- (int)getVideoFrameRate</code></div>
 
 		    
 			
@@ -698,7 +698,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The frame rate</p>
+				<p>The video frame rate</p>
 			</div>
 			
 
@@ -707,7 +707,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get video frame rate, it&rsquo;s real time changed</p>
+				<p>Get video frame rate, changing in real time</p>
 			</div>
 			
 
@@ -725,8 +725,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getVideoLostcnt" title="getVideoLostcnt"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getVideoLostcnt">&ndash;&nbsp;getVideoLostcnt</a></code>
+	<a name="//api/name/getVideoLostRateInPercent" title="getVideoLostRateInPercent"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVideoLostRateInPercent">&ndash;&nbsp;getVideoLostRateInPercent</a></code>
 </h3>
 
 	<div class="method-info">
@@ -741,7 +741,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (int)getVideoLostcnt</code></div>
+			<div class="method-subsection method-declaration"><code>- (int)getVideoLostRateInPercent</code></div>
 
 		    
 			
@@ -749,7 +749,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Package lost rate</p>
+				<p>Video package lost rate</p>
 			</div>
 			
 
@@ -787,7 +787,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get video width, fix size, it&rsquo;s not real time changed</p>
+				<p>Get video original width</p>
 			</div>
 			
 		    
@@ -800,7 +800,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Video width</p>
+				<p>Video original width</p>
 			</div>
 			
 
@@ -809,7 +809,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get video width, fix size, it&rsquo;s not real time changed</p>
+				<p>Get video original width</p>
 			</div>
 			
 
@@ -838,7 +838,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get video height, fix size, it&rsquo;s not real time changed</p>
+				<p>Get fixed video original height</p>
 			</div>
 			
 		    
@@ -851,7 +851,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Video height</p>
+				<p>Video original height</p>
 			</div>
 			
 
@@ -860,7 +860,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get video height, fix size, it&rsquo;s not real time changed</p>
+				<p>Get fixed video original height</p>
 			</div>
 			
 
@@ -889,7 +889,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get another peer&rsquo;s bitrate, it&rsquo;s real time changed</p>
+				<p>Get the other party&rsquo;s bitrate, changing in real time</p>
 			</div>
 			
 		    
@@ -902,7 +902,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Another peer&rsquo;s bitrate</p>
+				<p>The other party&rsquo;s bitrate</p>
 			</div>
 			
 
@@ -911,7 +911,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get another peer&rsquo;s bitrate, it&rsquo;s real time changed</p>
+				<p>Get the other party&rsquo;s bitrate, changing in real time</p>
 			</div>
 			
 
@@ -940,7 +940,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get bitrate of video call, it&rsquo;s real time changed</p>
+				<p>Get bitrate of video call, changing in real time</p>
 			</div>
 			
 		    
@@ -953,7 +953,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Bitrate of video</p>
+				<p>Bitrate of video call</p>
 			</div>
 			
 
@@ -962,7 +962,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get bitrate of video call, it&rsquo;s real time changed</p>
+				<p>Get bitrate of video call, changing in real time</p>
 			</div>
 			
 
@@ -980,8 +980,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/takeRemotePicture:" title="takeRemotePicture:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/takeRemotePicture:">&ndash;&nbsp;takeRemotePicture:</a></code>
+	<a name="//api/name/screenCaptureToFilePath:error:" title="screenCaptureToFilePath:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/screenCaptureToFilePath:error:">&ndash;&nbsp;screenCaptureToFilePath:error:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -991,70 +991,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get snapshot of video</p>
+				<p>Get a snapshot of current video screen as jpeg picture and save to the local file system.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)takeRemotePicture:(NSString *)<em>aFullPath</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aFullPath</code></th>
-						<td><p>Save path of picture</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get snapshot of video</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMCallSession.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/startVideoRecord:" title="startVideoRecord:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/startVideoRecord:">&ndash;&nbsp;startVideoRecord:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Start recording video</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)startVideoRecord:(NSString *)<em>aPath</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)screenCaptureToFilePath:(NSString *)<em>aPath</em> error:(EMError **)<em>pError</em></code></div>
 
 		    
 			
@@ -1064,7 +1006,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aPath</code></th>
-						<td><p>File save path</p></td>
+						<td><p>Saved path of picture</p></td>
 					</tr>
 				
 				</table>
@@ -1078,7 +1020,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Start recording video</p>
+				<p>Get a snapshot of current video screen as jpeg picture and save to the local file system.</p>
 			</div>
 			
 
@@ -1096,8 +1038,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/stopVideoRecord" title="stopVideoRecord"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stopVideoRecord">&ndash;&nbsp;stopVideoRecord</a></code>
+	<a name="//api/name/startVideoRecordingToFilePath:error:" title="startVideoRecordingToFilePath:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startVideoRecordingToFilePath:error:">&ndash;&nbsp;startVideoRecordingToFilePath:error:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1107,21 +1049,22 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Stop recording video</p>
+				<ul>
+<li>Start recording video
+*</li>
+<li>@param aPath            File saved path</li>
+<li>@param aError           Error</li>
+</ul>
+
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)stopVideoRecord</code></div>
+			<div class="method-subsection method-declaration"><code>- (void)startVideoRecordingToFilePath:(NSString *)<em>aPath</em> error:(EMError **)<em>aError</em></code></div>
 
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>path of record file</p>
-			</div>
 			
 
 			
@@ -1129,7 +1072,15 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Stop recording video</p>
+				<ul>
+<li>Start recording video
+*</li>
+<li>@param aPath            File saved path</li>
+<li>@param aError           Error</li>
+</ul>
+
+
+<p>*</p>
 			</div>
 			
 
@@ -1147,8 +1098,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/setCameraBackOrFront:" title="setCameraBackOrFront:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setCameraBackOrFront:">&ndash;&nbsp;setCameraBackOrFront:</a></code>
+	<a name="//api/name/stopVideoRecording:" title="stopVideoRecording:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopVideoRecording:">&ndash;&nbsp;stopVideoRecording:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1158,12 +1109,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Use front camera or back camera,default use front</p>
+				<p>Stop recording video</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setCameraBackOrFront:(BOOL)<em>isFont</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)stopVideoRecording:(EMError **)<em>aError</em></code></div>
 
 		    
 			
@@ -1172,8 +1123,8 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>isFont</code></th>
-						<td><p>Weather use front camera or not,Yes is Front,No is Back</p></td>
+						<th scope="row" class="argument-name"><code>aError</code></th>
+						<td><p>Error</p></td>
 					</tr>
 				
 				</table>
@@ -1187,7 +1138,65 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Use front camera or back camera,default use front</p>
+				<p>Stop recording video</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMCallSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/switchCameraPosition:" title="switchCameraPosition:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/switchCameraPosition:">&ndash;&nbsp;switchCameraPosition:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Use front camera or back camera, default use front</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)switchCameraPosition:(BOOL)<em>aIsFrontCamera</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIsFrontCamera</code></th>
+						<td><p>YES for front camera, NO for back camera.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use front camera or back camera, default use front</p>
 			</div>
 			
 
@@ -1219,7 +1228,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

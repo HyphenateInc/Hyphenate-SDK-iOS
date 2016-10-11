@@ -20,12 +20,12 @@
 @property (nonatomic, copy) NSString *action;
 
 /*!
- *  Command parameters, only for compatable with old version, use EMMessage's extend attribute instead
+ *  Command parameters, only compatable with old sdk versions. For SDK version 3.0+, use EMMessage's ext property instead
  */
 @property (nonatomic, copy) NSArray *params;
 
 /*!
- *  Initialize command message body
+ *  Construct command message body
  *
  *  @param aAction  Action content
  *

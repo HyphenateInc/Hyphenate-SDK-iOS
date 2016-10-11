@@ -56,7 +56,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/compressRatio">compressRatio</option>
+		<option value="//api/name/)">)</option>
 		
 		<option value="//api/name/size">size</option>
 		
@@ -118,8 +118,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Image message body, SDK will compress the image of message body that created by -(instancetype)initWithData:displayName: or
--(instancetype)initWithData:thumbnailData before send the message</p>
+						<p>Image message body</p>
 					</div>
 					
 					
@@ -181,8 +180,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/compressRatio" title="compressRatio"></a>
-	<h3 class="method-title"><code><a href="#//api/name/compressRatio">&nbsp;&nbsp;compressRatio</a></code>
+	<a name="//api/name/)" title=")"></a>
+	<h3 class="method-title"><code><a href="#//api/name/)">&nbsp;&nbsp;)</a></code>
 </h3>
 
 	<div class="method-info">
@@ -192,16 +191,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>Set compress ratio of image message, 1.0 without compress, default value is 0.6,
- will use the default value if try to set a value that equal to or less than 0</li>
-</ul>
-
+				<p>Image compression ratio. 1.0 without compression, default value is 0.6. SDK uses the default value if the given value is less than zero.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) CGFloat compressRatio</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) CGFloat compressRatio __deprecated_msg ( &quot;Use - compressionRatio&quot; )</code></div>
 
 		    
 			
@@ -213,11 +208,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<ul>
-<li>Set compress ratio of image message, 1.0 without compress, default value is 0.6,
- will use the default value if try to set a value that equal to or less than 0</li>
-</ul>
-
+				<p>Image compression ratio. 1.0 without compression, default value is 0.6. SDK uses the default value if the given value is less than zero.</p>
 			</div>
 			
 
@@ -384,7 +375,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Secret key of thumbnail, need verify secret key when download thumbnail</p>
+				<p>Secret key for downloading a thumbnail image</p>
 			</div>
 			
 		    
@@ -401,7 +392,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Secret key of thumbnail, need verify secret key when download thumbnail</p>
+				<p>Secret key for downloading a thumbnail image</p>
 			</div>
 			
 
@@ -430,7 +421,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Size of thumbnail</p>
+				<p>Size of a thumbnail</p>
 			</div>
 			
 		    
@@ -447,7 +438,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Size of thumbnail</p>
+				<p>Size of a thumbnail</p>
 			</div>
 			
 
@@ -476,7 +467,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>File length of thumbnail, in bytes</p>
+				<p>File length of a thumbnail, in bytes</p>
 			</div>
 			
 		    
@@ -493,7 +484,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>File length of thumbnail, in bytes</p>
+				<p>File length of a thumbnail, in bytes</p>
 			</div>
 			
 
@@ -522,7 +513,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Download status of thumbnail</p>
+				<p>Download status of a thumbnail</p>
 			</div>
 			
 		    
@@ -539,7 +530,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Download status of thumbnail</p>
+				<p>Download status of a thumbnail</p>
 			</div>
 			
 
@@ -568,7 +559,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Initialize image message body instance</p>
+				<p>Initialize an image message body instance</p>
 			</div>
 			
 		    
@@ -598,7 +589,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Image message body instance</p>
+				<p>An image message body instance</p>
 			</div>
 			
 
@@ -607,7 +598,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Initialize image message body instance</p>
+				<p>Initialize an image message body instance</p>
 			</div>
 			
 
@@ -639,7 +630,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

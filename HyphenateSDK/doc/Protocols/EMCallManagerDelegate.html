@@ -60,17 +60,17 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/didReceiveCallAccepted:">- didReceiveCallAccepted:</option>
+		<option value="//api/name/callDidAccept:">- callDidAccept:</option>
 		
-		<option value="//api/name/didReceiveCallConnected:">- didReceiveCallConnected:</option>
+		<option value="//api/name/callDidConnect:">- callDidConnect:</option>
 		
-		<option value="//api/name/didReceiveCallIncoming:">- didReceiveCallIncoming:</option>
+		<option value="//api/name/callDidEnd:reason:error:">- callDidEnd:reason:error:</option>
 		
-		<option value="//api/name/didReceiveCallNetworkChanged:status:">- didReceiveCallNetworkChanged:status:</option>
+		<option value="//api/name/callDidReceive:">- callDidReceive:</option>
 		
-		<option value="//api/name/didReceiveCallTerminated:reason:error:">- didReceiveCallTerminated:reason:error:</option>
+		<option value="//api/name/callNetworkStatusDidChange:status:">- callNetworkStatusDidChange:status:</option>
 		
-		<option value="//api/name/didReceiveCallUpdated:type:">- didReceiveCallUpdated:type:</option>
+		<option value="//api/name/callStateDidChange:type:">- callStateDidChange:type:</option>
 		
 	</optgroup>
 	
@@ -122,8 +122,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/didReceiveCallIncoming:" title="didReceiveCallIncoming:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveCallIncoming:">&ndash;&nbsp;didReceiveCallIncoming:</a></code>
+	<a name="//api/name/callDidReceive:" title="callDidReceive:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/callDidReceive:">&ndash;&nbsp;callDidReceive:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +133,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User B will receive this callback after user A dial user B</p>
+				<p>Delegate method will be invoked when receiving a call.
+User B will receive this callback after user A dial user B.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveCallIncoming:(EMCallSession *)<em>aSession</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)callDidReceive:(EMCallSession *)<em>aSession</em></code></div>
 
 		    
 			
@@ -162,7 +163,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User B will receive this callback after user A dial user B</p>
+				<p>Delegate method will be invoked when receiving a call.
+User B will receive this callback after user A dial user B.</p>
 			</div>
 			
 
@@ -180,8 +182,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveCallConnected:" title="didReceiveCallConnected:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveCallConnected:">&ndash;&nbsp;didReceiveCallConnected:</a></code>
+	<a name="//api/name/callDidConnect:" title="callDidConnect:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/callDidConnect:">&ndash;&nbsp;callDidConnect:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -191,12 +193,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Both user A and B will receive this callback after connection is established</p>
+				<p>Delegate method invokes when the connection is established.
+Both user A and B will receive this callback.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveCallConnected:(EMCallSession *)<em>aSession</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)callDidConnect:(EMCallSession *)<em>aSession</em></code></div>
 
 		    
 			
@@ -220,7 +223,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Both user A and B will receive this callback after connection is established</p>
+				<p>Delegate method invokes when the connection is established.
+Both user A and B will receive this callback.</p>
 			</div>
 			
 
@@ -238,8 +242,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveCallAccepted:" title="didReceiveCallAccepted:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveCallAccepted:">&ndash;&nbsp;didReceiveCallAccepted:</a></code>
+	<a name="//api/name/callDidAccept:" title="callDidAccept:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/callDidAccept:">&ndash;&nbsp;callDidAccept:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -249,14 +253,27 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A will receive this callback after user B accept A&rsquo;s call</p>
+				<p>Delegate method invokes when the outgoing call is accepted by the recipient.
+User A will receive this callback after user B accept A&rsquo;s call.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveCallAccepted:(EMCallSession *)<em>aSession</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)callDidAccept:(EMCallSession *)<em>aSession</em></code></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Session</code></th>
+						<td><p>instance</p></td>
+					</tr>
+				
+				</table>
+			</div>
 			
 
 			
@@ -266,9 +283,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A will receive this callback after user B accept A&rsquo;s call</p>
-
-<p>@param aSession</p>
+				<p>Delegate method invokes when the outgoing call is accepted by the recipient.
+User A will receive this callback after user B accept A&rsquo;s call.</p>
 			</div>
 			
 
@@ -286,8 +302,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveCallTerminated:reason:error:" title="didReceiveCallTerminated:reason:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveCallTerminated:reason:error:">&ndash;&nbsp;didReceiveCallTerminated:reason:error:</a></code>
+	<a name="//api/name/callDidEnd:reason:error:" title="callDidEnd:reason:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/callDidEnd:reason:error:">&ndash;&nbsp;callDidEnd:reason:error:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -297,13 +313,14 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>1.The another peer will receive this callback after user A or user B terminate the call.
-2.Both user A and B will receive this callback after error occur.</p>
+				<p>Delegate method invokes when the other party ends the call or some error happens.
+1.The another party will receive this callback after user A or user B end the call.
+2.Both user A and B will receive this callback after error occured.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveCallTerminated:(EMCallSession *)<em>aSession</em> reason:(EMCallEndReason)<em>aReason</em> error:(EMError *)<em>aError</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)callDidEnd:(EMCallSession *)<em>aSession</em> reason:(EMCallEndReason)<em>aReason</em> error:(EMError *)<em>aError</em></code></div>
 
 		    
 			
@@ -314,16 +331,16 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aSession</code></th>
 						<td><p>Session instance</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aReason</code></th>
-						<td><p>Terminate reason</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aError</code></th>
-						<td><p>Error</p></td>
+						<td><p><a href="../Classes/EMError.html">EMError</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aOption</code></th>
+						<td><p>The reason of ending the call</p></td>
 					</tr>
 				
 				</table>
@@ -337,8 +354,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>1.The another peer will receive this callback after user A or user B terminate the call.
-2.Both user A and B will receive this callback after error occur.</p>
+				<p>Delegate method invokes when the other party ends the call or some error happens.
+1.The another party will receive this callback after user A or user B end the call.
+2.Both user A and B will receive this callback after error occured.</p>
 			</div>
 			
 
@@ -356,8 +374,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveCallUpdated:type:" title="didReceiveCallUpdated:type:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveCallUpdated:type:">&ndash;&nbsp;didReceiveCallUpdated:type:</a></code>
+	<a name="//api/name/callStateDidChange:type:" title="callStateDidChange:type:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/callStateDidChange:type:">&ndash;&nbsp;callStateDidChange:type:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -367,12 +385,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A and B is on the call, A pause or resume the data stream, B will receive the callback</p>
+				<p>Delegate method invokes when the other party pauses or resumes the call.
+User A and B are on the same call, A pauses or resumes the call, B will receive this callback.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveCallUpdated:(EMCallSession *)<em>aSession</em> type:(EMCallStreamControlType)<em>aType</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)callStateDidChange:(EMCallSession *)<em>aSession</em> type:(EMCallStreamingStatus)<em>aType</em></code></div>
 
 		    
 			
@@ -387,7 +406,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aType</code></th>
-						<td><p>Type</p></td>
+						<td><p>Current call status</p></td>
 					</tr>
 				
 				</table>
@@ -401,7 +420,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A and B is on the call, A pause or resume the data stream, B will receive the callback</p>
+				<p>Delegate method invokes when the other party pauses or resumes the call.
+User A and B are on the same call, A pauses or resumes the call, B will receive this callback.</p>
 			</div>
 			
 
@@ -419,8 +439,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveCallNetworkChanged:status:" title="didReceiveCallNetworkChanged:status:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveCallNetworkChanged:status:">&ndash;&nbsp;didReceiveCallNetworkChanged:status:</a></code>
+	<a name="//api/name/callNetworkStatusDidChange:status:" title="callNetworkStatusDidChange:status:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/callNetworkStatusDidChange:status:">&ndash;&nbsp;callNetworkStatusDidChange:status:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -430,12 +450,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A and B is on the call, A network status is not stable, A will receive the callback</p>
+				<p>Delegate method invokes when the local network status changes.
+User A and B are on the same call, A&rsquo;s network status changes from active to unstable or unavailable, and A will receive the callback.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveCallNetworkChanged:(EMCallSession *)<em>aSession</em> status:(EMCallNetworkStatus)<em>aStatus</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)callNetworkStatusDidChange:(EMCallSession *)<em>aSession</em> status:(EMCallNetworkStatus)<em>aStatus</em></code></div>
 
 		    
 			
@@ -450,7 +471,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aStatus</code></th>
-						<td><p>Current status</p></td>
+						<td><p>Current network status</p></td>
 					</tr>
 				
 				</table>
@@ -464,7 +485,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A and B is on the call, A network status is not stable, A will receive the callback</p>
+				<p>Delegate method invokes when the local network status changes.
+User A and B are on the same call, A&rsquo;s network status changes from active to unstable or unavailable, and A will receive the callback.</p>
 			</div>
 			
 
@@ -496,7 +518,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

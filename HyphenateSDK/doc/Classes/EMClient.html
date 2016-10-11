@@ -94,33 +94,35 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/addDelegate:">- addDelegate:</option>
+		
 		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
 		
 		<option value="//api/name/applicationDidEnterBackground:">- applicationDidEnterBackground:</option>
 		
 		<option value="//api/name/applicationWillEnterForeground:">- applicationWillEnterForeground:</option>
 		
-		<option value="//api/name/asyncBindDeviceToken:success:failure:">- asyncBindDeviceToken:success:failure:</option>
-		
-		<option value="//api/name/asyncGetPushOptionsFromServer:failure:">- asyncGetPushOptionsFromServer:failure:</option>
-		
-		<option value="//api/name/asyncLoginWithUsername:password:success:failure:">- asyncLoginWithUsername:password:success:failure:</option>
-		
-		<option value="//api/name/asyncLogout:success:failure:">- asyncLogout:success:failure:</option>
-		
-		<option value="//api/name/asyncRegisterWithUsername:password:success:failure:">- asyncRegisterWithUsername:password:success:failure:</option>
-		
-		<option value="//api/name/asyncSetApnsNickname:success:failure:">- asyncSetApnsNickname:success:failure:</option>
-		
-		<option value="//api/name/asyncUpdatePushOptionsToServer:failure:">- asyncUpdatePushOptionsToServer:failure:</option>
-		
-		<option value="//api/name/asyncUploadLogToServer:failure:">- asyncUploadLogToServer:failure:</option>
-		
-		<option value="//api/name/dataMigrationTo3">- dataMigrationTo3</option>
+		<option value="//api/name/getPushNotificationOptionsFromServerWithCompletion:">- getPushNotificationOptionsFromServerWithCompletion:</option>
 		
 		<option value="//api/name/initializeSDKWithOptions:">- initializeSDKWithOptions:</option>
 		
+		<option value="//api/name/loginWithUsername:password:completion:">- loginWithUsername:password:completion:</option>
+		
+		<option value="//api/name/logout:completion:">- logout:completion:</option>
+		
+		<option value="//api/name/migrateDatabaseToLatestSDK">- migrateDatabaseToLatestSDK</option>
+		
+		<option value="//api/name/registerForRemoteNotificationsWithDeviceToken:completion:">- registerForRemoteNotificationsWithDeviceToken:completion:</option>
+		
+		<option value="//api/name/registerWithUsername:password:completion:">- registerWithUsername:password:completion:</option>
+		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/updatePushNotifiationDisplayName:completion:">- updatePushNotifiationDisplayName:completion:</option>
+		
+		<option value="//api/name/updatePushNotificationOptionsToServerWithCompletion:">- updatePushNotificationOptionsToServerWithCompletion:</option>
+		
+		<option value="//api/name/uploadDebugLogToServerWithCompletion:">- uploadDebugLogToServerWithCompletion:</option>
 		
 	</optgroup>
 	
@@ -231,7 +233,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Current logined account</p>
+				<p>Current logged in user&rsquo;s username</p>
 			</div>
 			
 		    
@@ -248,7 +250,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Current logined account</p>
+				<p>Current logged in user&rsquo;s username</p>
 			</div>
 			
 
@@ -323,7 +325,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Apple APNS setting</p>
+				<p>Apple Push Notification Service setting</p>
 			</div>
 			
 		    
@@ -340,7 +342,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Apple APNS setting</p>
+				<p>Apple Push Notification Service setting</p>
 			</div>
 			
 
@@ -369,7 +371,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Chat module</p>
+				<p>Chat Management</p>
 			</div>
 			
 		    
@@ -386,7 +388,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Chat module</p>
+				<p>Chat Management</p>
 			</div>
 			
 
@@ -415,7 +417,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Contact module</p>
+				<p>Contact Management</p>
 			</div>
 			
 		    
@@ -432,7 +434,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Contact module</p>
+				<p>Contact Management</p>
 			</div>
 			
 
@@ -461,7 +463,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Group module</p>
+				<p>Group Management</p>
 			</div>
 			
 		    
@@ -478,7 +480,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Group module</p>
+				<p>Group Management</p>
 			</div>
 			
 
@@ -507,7 +509,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Chatroom module</p>
+				<p>Chat room Management</p>
 			</div>
 			
 		    
@@ -524,7 +526,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Chatroom module</p>
+				<p>Chat room Management</p>
 			</div>
 			
 
@@ -553,7 +555,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether SDK will automatically login last logined account</p>
+				<p>If SDK will automatically log into with previously logged in session</p>
 			</div>
 			
 		    
@@ -570,7 +572,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether SDK will automatically login last logined account</p>
+				<p>If SDK will automatically log into with previously logged in session</p>
 			</div>
 			
 
@@ -599,7 +601,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether user has logged in</p>
+				<p>If a user logged in</p>
 			</div>
 			
 		    
@@ -616,7 +618,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether user has logged in</p>
+				<p>If a user logged in</p>
 			</div>
 			
 
@@ -645,7 +647,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether has connected to chat server</p>
+				<p>Connection status to Hyphenate IM server</p>
 			</div>
 			
 		    
@@ -662,7 +664,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether has connected to chat server</p>
+				<p>Connection status to Hyphenate IM server</p>
 			</div>
 			
 
@@ -691,7 +693,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get SDK single instance</p>
+				<p>Get SDK singleton instance</p>
 			</div>
 			
 		    
@@ -708,7 +710,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get SDK single instance</p>
+				<p>Get SDK singleton instance</p>
 			</div>
 			
 
@@ -757,7 +759,65 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aQueue</code></th>
-						<td><p>The queue of call delegate method</p></td>
+						<td><p>The queue of calling delegate methods</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMClientDelegate&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
 					</tr>
 				
 				</table>
@@ -858,7 +918,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Initialization sdk</p>
+				<p>Initialize the SDK</p>
 			</div>
 			
 		    
@@ -892,7 +952,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Initialization sdk</p>
+				<p>Initialize the SDK</p>
 			</div>
 			
 
@@ -910,8 +970,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/asyncRegisterWithUsername:password:success:failure:" title="asyncRegisterWithUsername:password:success:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/asyncRegisterWithUsername:password:success:failure:">&ndash;&nbsp;asyncRegisterWithUsername:password:success:failure:</a></code>
+	<a name="//api/name/registerWithUsername:password:completion:" title="registerWithUsername:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerWithUsername:password:completion:">&ndash;&nbsp;registerWithUsername:password:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -921,12 +981,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Register a new user</p>
+				<p>Register a new IM user</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)asyncRegisterWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)registerWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -945,13 +1005,8 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
-						<td><p>The callback block of success</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
-						<td><p>The callback block of failure</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -965,9 +1020,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Register a new user</p>
+				<p>Register a new IM user</p>
 
-<p>It is not recommended, advise to register new user through REST API</p>
+<p>To enhance the reliability, registering new IM user through REST API from backend is highly recommended</p>
 			</div>
 			
 
@@ -985,8 +1040,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/asyncLoginWithUsername:password:success:failure:" title="asyncLoginWithUsername:password:success:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/asyncLoginWithUsername:password:success:failure:">&ndash;&nbsp;asyncLoginWithUsername:password:success:failure:</a></code>
+	<a name="//api/name/loginWithUsername:password:completion:" title="loginWithUsername:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginWithUsername:password:completion:">&ndash;&nbsp;loginWithUsername:password:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1001,7 +1056,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)asyncLoginWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)loginWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1020,13 +1075,8 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
-						<td><p>The callback block of success</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
-						<td><p>The callback block of failure</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -1058,8 +1108,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/asyncLogout:success:failure:" title="asyncLogout:success:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/asyncLogout:success:failure:">&ndash;&nbsp;asyncLogout:success:failure:</a></code>
+	<a name="//api/name/logout:completion:" title="logout:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logout:completion:">&ndash;&nbsp;logout:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1074,7 +1124,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)asyncLogout:(BOOL)<em>aIsUnbindDeviceToken</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)logout:(BOOL)<em>aIsUnbindDeviceToken</em> completion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1084,18 +1134,18 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aIsUnbindDeviceToken</code></th>
-						<td><p>Whether unbind device token, device will don&rsquo;t receive message push after unbind token, if input YES, unbind failed will return error</p></td>
+						<td><p>Unbind device token to disable the Apple Push Notification Service</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
 			</div>
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Error</p>
-			</div>
 			
 
 			
@@ -1121,8 +1171,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/asyncBindDeviceToken:success:failure:" title="asyncBindDeviceToken:success:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/asyncBindDeviceToken:success:failure:">&ndash;&nbsp;asyncBindDeviceToken:success:failure:</a></code>
+	<a name="//api/name/registerForRemoteNotificationsWithDeviceToken:completion:" title="registerForRemoteNotificationsWithDeviceToken:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerForRemoteNotificationsWithDeviceToken:completion:">&ndash;&nbsp;registerForRemoteNotificationsWithDeviceToken:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1132,12 +1182,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Bind device token</p>
+				<p>Device token binding is required to enable Apple push notification service</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)asyncBindDeviceToken:(NSData *)<em>aDeviceToken</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)registerForRemoteNotificationsWithDeviceToken:(NSData *)<em>aDeviceToken</em> completion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1151,13 +1201,8 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
-						<td><p>The callback block of success</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
-						<td><p>The callback block of failure</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -1171,7 +1216,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Bind device token</p>
+				<p>Device token binding is required to enable Apple push notification service</p>
 			</div>
 			
 
@@ -1189,8 +1234,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/asyncSetApnsNickname:success:failure:" title="asyncSetApnsNickname:success:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/asyncSetApnsNickname:success:failure:">&ndash;&nbsp;asyncSetApnsNickname:success:failure:</a></code>
+	<a name="//api/name/updatePushNotifiationDisplayName:completion:" title="updatePushNotifiationDisplayName:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updatePushNotifiationDisplayName:completion:">&ndash;&nbsp;updatePushNotifiationDisplayName:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1200,12 +1245,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set nick name to show in push message</p>
+				<p>Set display name for the push notification</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)asyncSetApnsNickname:(NSString *)<em>aNickname</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)updatePushNotifiationDisplayName:(NSString *)<em>aDisplayName</em> completion:(void ( ^ ) ( NSString *aDisplayName , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1214,18 +1259,13 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aNickname</code></th>
-						<td><p>Nickname</p></td>
+						<th scope="row" class="argument-name"><code>aDisplayName</code></th>
+						<td><p>Display name of push</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
-						<td><p>The callback block of success</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
-						<td><p>The callback block of failure</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -1239,7 +1279,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Set nick name to show in push message</p>
+				<p>Set display name for the push notification</p>
 			</div>
 			
 
@@ -1257,8 +1297,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/asyncGetPushOptionsFromServer:failure:" title="asyncGetPushOptionsFromServer:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/asyncGetPushOptionsFromServer:failure:">&ndash;&nbsp;asyncGetPushOptionsFromServer:failure:</a></code>
+	<a name="//api/name/getPushNotificationOptionsFromServerWithCompletion:" title="getPushNotificationOptionsFromServerWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPushNotificationOptionsFromServerWithCompletion:">&ndash;&nbsp;getPushNotificationOptionsFromServerWithCompletion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1268,12 +1308,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get apns <a href="#//api/name/options">options</a> from the server</p>
+				<p>Get Apple Push Notification Service <a href="#//api/name/options">options</a> from the server</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)asyncGetPushOptionsFromServer:(void ( ^ ) ( EMPushOptions *aOptions ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)getPushNotificationOptionsFromServerWithCompletion:(void ( ^ ) ( EMPushOptions *aOptions , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1282,13 +1322,8 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
-						<td><p>The callback block of success</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
-						<td><p>The callback block of failure</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -1302,7 +1337,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get apns <a href="#//api/name/options">options</a> from the server</p>
+				<p>Get Apple Push Notification Service <a href="#//api/name/options">options</a> from the server</p>
 			</div>
 			
 
@@ -1320,8 +1355,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/asyncUpdatePushOptionsToServer:failure:" title="asyncUpdatePushOptionsToServer:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/asyncUpdatePushOptionsToServer:failure:">&ndash;&nbsp;asyncUpdatePushOptionsToServer:failure:</a></code>
+	<a name="//api/name/updatePushNotificationOptionsToServerWithCompletion:" title="updatePushNotificationOptionsToServerWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updatePushNotificationOptionsToServerWithCompletion:">&ndash;&nbsp;updatePushNotificationOptionsToServerWithCompletion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1331,12 +1366,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Update APNS <a href="#//api/name/options">options</a> to the server</p>
+				<p>Update Apple Push Notification Service <a href="#//api/name/options">options</a> to the server</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)asyncUpdatePushOptionsToServer:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)updatePushNotificationOptionsToServerWithCompletion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1345,13 +1380,8 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
-						<td><p>The callback block of success</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
-						<td><p>The callback block of failure</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -1365,7 +1395,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Update APNS <a href="#//api/name/options">options</a> to the server</p>
+				<p>Update Apple Push Notification Service <a href="#//api/name/options">options</a> to the server</p>
 			</div>
 			
 
@@ -1383,8 +1413,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/asyncUploadLogToServer:failure:" title="asyncUploadLogToServer:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/asyncUploadLogToServer:failure:">&ndash;&nbsp;asyncUploadLogToServer:failure:</a></code>
+	<a name="//api/name/uploadDebugLogToServerWithCompletion:" title="uploadDebugLogToServerWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/uploadDebugLogToServerWithCompletion:">&ndash;&nbsp;uploadDebugLogToServerWithCompletion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1399,7 +1429,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)asyncUploadLogToServer:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)uploadDebugLogToServerWithCompletion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1408,13 +1438,8 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
-						<td><p>The callback block of success</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
-						<td><p>The callback block of failure</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -1446,8 +1471,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dataMigrationTo3" title="dataMigrationTo3"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dataMigrationTo3">&ndash;&nbsp;dataMigrationTo3</a></code>
+	<a name="//api/name/migrateDatabaseToLatestSDK" title="migrateDatabaseToLatestSDK"></a>
+	<h3 class="method-title"><code><a href="#//api/name/migrateDatabaseToLatestSDK">&ndash;&nbsp;migrateDatabaseToLatestSDK</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1457,12 +1482,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>iOS-specific, data migration to SDK3.0</p>
+				<p>Migrate the IM database to the latest SDK <a href="#//api/name/version">version</a></p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)dataMigrationTo3</code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)migrateDatabaseToLatestSDK</code></div>
 
 		    
 			
@@ -1470,7 +1495,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Whether migration successful</p>
+				<p>Return YES for success</p>
 			</div>
 			
 
@@ -1479,11 +1504,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>iOS-specific, data migration to SDK3.0</p>
-
-<p>Synchronization method will block the current thread</p>
-
-<p>It&rsquo;s needed to call this method when update to SDK3.0, developers need to wait this method complete before DB related operations</p>
+				<p>Migrate the IM database to the latest SDK <a href="#//api/name/version">version</a></p>
 			</div>
 			
 
@@ -1512,7 +1533,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>iOS only, should call this method to disconnect from server when app enter backgroup</p>
+				<p>Disconnect from server when app enters background</p>
 			</div>
 			
 		    
@@ -1541,7 +1562,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>iOS only, should call this method to disconnect from server when app enter backgroup</p>
+				<p>Disconnect from server when app enters background</p>
 			</div>
 			
 
@@ -1570,7 +1591,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>iOS only, should call this method to re-connect to server when app restore to foreground</p>
+				<p>Re-connect to server when app enters foreground</p>
 			</div>
 			
 		    
@@ -1599,7 +1620,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>iOS only, should call this method to re-connect to server when app restore to foreground</p>
+				<p>Re-connect to server when app enters foreground</p>
 			</div>
 			
 
@@ -1685,7 +1706,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

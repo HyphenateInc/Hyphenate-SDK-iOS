@@ -11,8 +11,8 @@
  *  Network Connection Status
  */
 typedef enum{
-    EMConnectionConnected = 0,  /*! Connected */
-    EMConnectionDisconnected,   /*! Not connected */
+    EMConnectionConnected = 0,  /*! * Connected */
+    EMConnectionDisconnected,   /*! * Not connected */
 }EMConnectionState;
 
 @class EMError;
@@ -25,31 +25,27 @@ typedef enum{
 @optional
 
 /*!
- *  Connection to the server status changes will receive the callback
- *  
- *  calling the method causes:
- *  1. After successful login, the phone can not access
- *  2. After a successful login, network status change
- *  
+ *  Delegate method will be invoked when server connection state has changed
+ *
  *  @param aConnectionState Current state
  */
-- (void)didConnectionStateChanged:(EMConnectionState)aConnectionState;
+- (void)connectionStateDidChange:(EMConnectionState)aConnectionState;
 
 /*!
- *  Callback Automatic login fails
+ *  Delegate method will be invoked when auto login is completed
  *
  *  @param aError Error
  */
-- (void)didAutoLoginWithError:(EMError *)aError;
+- (void)autoLoginDidCompleteWithError:(EMError *)aError;
 
 /*!
- *  Current login account to log in on other devices will receive the callback
+ *  Delegate method will be invoked when current IM account logged into another device
  */
-- (void)didLoginFromOtherDevice;
+- (void)userAccountDidLoginFromOtherDevice;
 
 /*!
- *  Current login account will receive the callback is deleted from the server
+ *  Delegate method will be invoked when current IM account is removed from server
  */
-- (void)didRemovedFromServer;
+- (void)userAccountDidRemoveFromServer;
 
 @end

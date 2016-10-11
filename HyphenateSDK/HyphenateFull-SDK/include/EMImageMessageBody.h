@@ -10,8 +10,7 @@
 #import "EMFileMessageBody.h"
 
 /*!
- *  Image message body, SDK will compress the image of message body that created by -(instancetype)initWithData:displayName: or
- *  -(instancetype)initWithData:thumbnailData before send the message
+ *  Image message body
  */
 @interface EMImageMessageBody : EMFileMessageBody
 
@@ -21,10 +20,11 @@
 @property (nonatomic) CGSize size;
 
 /*!
- *  Set compress ratio of image message, 1.0 without compress, default value is 0.6, 
-    will use the default value if try to set a value that equal to or less than 0
+ *  Image compression ratio. 1.0 without compression, default value is 0.6. SDK uses the default value if the given value is less than zero.
  */
-@property (nonatomic) CGFloat compressRatio;
+@property (nonatomic) CGFloat compressRatio __deprecated_msg("Use - compressionRatio");
+
+@property (nonatomic) CGFloat compressionRatio;
 
 /*!
  *  Display name of thumbnail
@@ -42,32 +42,32 @@
 @property (nonatomic, copy) NSString *thumbnailRemotePath;
 
 /*!
- *  Secret key of thumbnail, need verify secret key when download thumbnail
+ *  Secret key for downloading a thumbnail image
  */
 @property (nonatomic, copy) NSString *thumbnailSecretKey;
 
 /*!
- *  Size of thumbnail
+ *  Size of a thumbnail
  */
 @property (nonatomic) CGSize thumbnailSize;
 
 /*!
- *  File length of thumbnail, in bytes
+ *  File length of a thumbnail, in bytes
  */
 @property (nonatomic) long long thumbnailFileLength;
 
 /*!
- *  Download status of thumbnail
+ *  Download status of a thumbnail
  */
 @property (nonatomic)EMDownloadStatus thumbnailDownloadStatus;
 
 /*!
- *  Initialize image message body instance
+ *  Initialize an image message body instance
  *
  *  @param aData          The data of image
  *  @param aThumbnailData The data of thumbnail
  *
- *  @result Image message body instance
+ *  @result An image message body instance
  */
 - (instancetype)initWithData:(NSData *)aData
                thumbnailData:(NSData *)aThumbnailData;
