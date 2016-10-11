@@ -8,11 +8,11 @@
 #import <Foundation/Foundation.h>
 
 /*!
- *  The reason of be kicked out from chatroom
+ *  The casuse for kicking a user out of a chatroom
  */
 typedef enum{
-    EMChatroomBeKickedReasonBeRemoved = 0,  /*! Removed by owner  */
-    EMChatroomBeKickedReasonDestroyed,      /*! Chatroom has been destroyed */
+    EMChatroomBeKickedReasonBeRemoved = 0,  /*!  Removed by chatroom owner  */
+    EMChatroomBeKickedReasonDestroyed,      /*!  Chatroom has been destroyed */
 }EMChatroomBeKickedReason;
 
 @class EMChatroom;
@@ -25,31 +25,29 @@ typedef enum{
 @optional
 
 /*!
- *  A user joined chatroom
+ *  Delegate method will be invoked when a user joins a chatroom.
  *
  *  @param aChatroom    Joined chatroom
  *  @param aUsername    The user who joined chatroom
  */
-- (void)didReceiveUserJoinedChatroom:(EMChatroom *)aChatroom
-                            username:(NSString *)aUsername;
+- (void)userDidJoinChatroom:(EMChatroom *)aChatroom
+                       user:(NSString *)aUsername;
 
 /*!
- *  A user leaved chatroom
+ *  Delegate method will be invoked when a user leaves a chatroom.
  *
- *  @param aChatroom    Leaved chatroom
+ *  @param aChatroom    Left chatroom
  *  @param aUsername    The user who leaved chatroom
  */
-- (void)didReceiveUserLeavedChatroom:(EMChatroom *)aChatroom
-                            username:(NSString *)aUsername;
+- (void)userDidLeaveChatroom:(EMChatroom *)aChatroom
+                        user:(NSString *)aUsername;
 
 /*!
- *  User was kicked out from a chatroom
+ *  Delegate method will be invoked when a user is dismissed from a chat room
  *
- *  @param aChatroom    The chatroom which user was kicked out from
- *  @param aReason      The reason of user was kicked out
+ *  @param aChatroom    aChatroom
+ *  @param aReason      The reason of dismissing user from the chat room
  */
-- (void)didReceiveKickedFromChatroom:(EMChatroom *)aChatroom
-                              reason:(EMChatroomBeKickedReason)aReason;
-
-
+- (void)didDismissFromChatroom:(EMChatroom *)aChatroom
+                        reason:(EMChatroomBeKickedReason)aReason;
 @end

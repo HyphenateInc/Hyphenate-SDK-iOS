@@ -12,13 +12,13 @@
  *  Message body type
  */
 typedef enum{
-    EMMessageBodyTypeText   = 1,    /*! Text */
-    EMMessageBodyTypeImage,         /*! Image */
-    EMMessageBodyTypeVideo,         /*! Video */
-    EMMessageBodyTypeLocation,      /*! Location */
-    EMMessageBodyTypeVoice,         /*! Voice */
-    EMMessageBodyTypeFile,          /*! File */
-    EMMessageBodyTypeCmd,           /*! Cmd */
+    EMMessageBodyTypeText   = 1,    /*!  Text */
+    EMMessageBodyTypeImage,         /*!  Image */
+    EMMessageBodyTypeVideo,         /*!  Video */
+    EMMessageBodyTypeLocation,      /*!  Location */
+    EMMessageBodyTypeVoice,         /*!  Voice */
+    EMMessageBodyTypeFile,          /*!  File */
+    EMMessageBodyTypeCmd,           /*!  Command */
 }EMMessageBodyType;
 
 /*!

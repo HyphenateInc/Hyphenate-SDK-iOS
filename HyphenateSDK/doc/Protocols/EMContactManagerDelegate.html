@@ -60,15 +60,15 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/didReceiveAddedFromUsername:">- didReceiveAddedFromUsername:</option>
+		<option value="//api/name/friendRequestDidApproveByUser:">- friendRequestDidApproveByUser:</option>
 		
-		<option value="//api/name/didReceiveAgreedFromUsername:">- didReceiveAgreedFromUsername:</option>
+		<option value="//api/name/friendRequestDidDeclineByUser:">- friendRequestDidDeclineByUser:</option>
 		
-		<option value="//api/name/didReceiveDeclinedFromUsername:">- didReceiveDeclinedFromUsername:</option>
+		<option value="//api/name/friendRequestDidReceiveFromUser:message:">- friendRequestDidReceiveFromUser:message:</option>
 		
-		<option value="//api/name/didReceiveDeletedFromUsername:">- didReceiveDeletedFromUsername:</option>
+		<option value="//api/name/friendshipDidAddByUser:">- friendshipDidAddByUser:</option>
 		
-		<option value="//api/name/didReceiveFriendInvitationFromUsername:message:">- didReceiveFriendInvitationFromUsername:message:</option>
+		<option value="//api/name/friendshipDidRemoveByUser:">- friendshipDidRemoveByUser:</option>
 		
 	</optgroup>
 	
@@ -120,8 +120,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/didReceiveAgreedFromUsername:" title="didReceiveAgreedFromUsername:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveAgreedFromUsername:">&ndash;&nbsp;didReceiveAgreedFromUsername:</a></code>
+	<a name="//api/name/friendRequestDidApproveByUser:" title="friendRequestDidApproveByUser:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendRequestDidApproveByUser:">&ndash;&nbsp;friendRequestDidApproveByUser:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -131,12 +131,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A will receive this callback after user B agreed user A&rsquo;s add-friend invitation</p>
+				<p>Delegate method will be invoked is a friend request is approved.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveAgreedFromUsername:(NSString *)<em>aUsername</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)friendRequestDidApproveByUser:(NSString *)<em>aUsername</em></code></div>
 
 		    
 			
@@ -146,7 +146,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>User B</p></td>
+						<td><p>User who approves the friend&rsquo;s request</p></td>
 					</tr>
 				
 				</table>
@@ -160,7 +160,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A will receive this callback after user B agreed user A&rsquo;s add-friend invitation</p>
+				<p>Delegate method will be invoked is a friend request is approved.</p>
+
+<p>User A will receive this callback after user B approved user A&rsquo;s friend request</p>
 			</div>
 			
 
@@ -178,8 +180,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveDeclinedFromUsername:" title="didReceiveDeclinedFromUsername:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveDeclinedFromUsername:">&ndash;&nbsp;didReceiveDeclinedFromUsername:</a></code>
+	<a name="//api/name/friendRequestDidDeclineByUser:" title="friendRequestDidDeclineByUser:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendRequestDidDeclineByUser:">&ndash;&nbsp;friendRequestDidDeclineByUser:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -189,12 +191,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A will receive this callback after user B declined user A&rsquo;s add-friend invitation</p>
+				<p>Delegate method will be invoked if a friend request is declined.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveDeclinedFromUsername:(NSString *)<em>aUsername</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)friendRequestDidDeclineByUser:(NSString *)<em>aUsername</em></code></div>
 
 		    
 			
@@ -204,7 +206,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>User B</p></td>
+						<td><p>User who declined the friend&rsquo;s request</p></td>
 					</tr>
 				
 				</table>
@@ -218,7 +220,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A will receive this callback after user B declined user A&rsquo;s add-friend invitation</p>
+				<p>Delegate method will be invoked if a friend request is declined.</p>
+
+<p>User A will receive this callback after user B declined user A&rsquo;s friend request</p>
 			</div>
 			
 
@@ -236,8 +240,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveDeletedFromUsername:" title="didReceiveDeletedFromUsername:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveDeletedFromUsername:">&ndash;&nbsp;didReceiveDeletedFromUsername:</a></code>
+	<a name="//api/name/friendshipDidRemoveByUser:" title="friendshipDidRemoveByUser:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendshipDidRemoveByUser:">&ndash;&nbsp;friendshipDidRemoveByUser:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -247,26 +251,21 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A will receive this callback after User B delete the friend relationship between user A</p>
+				<ul>
+<li>Delegate method will be invoked if user is removed as a contact by another user
+*</li>
+<li>User A will receive this callback after User B unfriended with user A
+*</li>
+<li>@param aUsername   User who unfriended the cureent user</li>
+</ul>
+
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveDeletedFromUsername:(NSString *)<em>aUsername</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)friendshipDidRemoveByUser:(NSString *)<em>aUsername</em></code></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>User B</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -276,7 +275,14 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A will receive this callback after User B delete the friend relationship between user A</p>
+				<ul>
+<li>Delegate method will be invoked if user is removed as a contact by another user
+*</li>
+<li>User A will receive this callback after User B unfriended with user A
+*</li>
+<li>@param aUsername   User who unfriended the cureent user</li>
+</ul>
+
 			</div>
 			
 
@@ -294,8 +300,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveAddedFromUsername:" title="didReceiveAddedFromUsername:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveAddedFromUsername:">&ndash;&nbsp;didReceiveAddedFromUsername:</a></code>
+	<a name="//api/name/friendshipDidAddByUser:" title="friendshipDidAddByUser:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendshipDidAddByUser:">&ndash;&nbsp;friendshipDidAddByUser:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -305,12 +311,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Both user A and B will receive this callback after User B agreed user A&rsquo;s add-friend invitation</p>
+				<p>Delegate method will be invoked id the user is added as a contact by another user.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveAddedFromUsername:(NSString *)<em>aUsername</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)friendshipDidAddByUser:(NSString *)<em>aUsername</em></code></div>
 
 		    
 			
@@ -334,7 +340,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Both user A and B will receive this callback after User B agreed user A&rsquo;s add-friend invitation</p>
+				<p>Delegate method will be invoked id the user is added as a contact by another user.</p>
+
+<p>Both user A and B will receive this callback after User B agreed user A&rsquo;s add-friend invitation</p>
 			</div>
 			
 
@@ -352,8 +360,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveFriendInvitationFromUsername:message:" title="didReceiveFriendInvitationFromUsername:message:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveFriendInvitationFromUsername:message:">&ndash;&nbsp;didReceiveFriendInvitationFromUsername:message:</a></code>
+	<a name="//api/name/friendRequestDidReceiveFromUser:message:" title="friendRequestDidReceiveFromUser:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/friendRequestDidReceiveFromUser:message:">&ndash;&nbsp;friendRequestDidReceiveFromUser:message:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -363,12 +371,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A will receive this callback after user B requested to add user A as a friend</p>
+				<p>Delegate method will be invoked when user receives a friend request</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveFriendInvitationFromUsername:(NSString *)<em>aUsername</em> message:(NSString *)<em>aMessage</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)friendRequestDidReceiveFromUser:(NSString *)<em>aUsername</em> message:(NSString *)<em>aMessage</em></code></div>
 
 		    
 			
@@ -378,12 +386,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>User B</p></td>
+						<td><p>Friend request sender</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aMessage</code></th>
-						<td><p>Friend invitation message</p></td>
+						<td><p>Friend request message</p></td>
 					</tr>
 				
 				</table>
@@ -397,7 +405,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A will receive this callback after user B requested to add user A as a friend</p>
+				<p>Delegate method will be invoked when user receives a friend request</p>
+
+<p>User A will receive this callback when receiving a friend request from user B</p>
 			</div>
 			
 
@@ -429,7 +439,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

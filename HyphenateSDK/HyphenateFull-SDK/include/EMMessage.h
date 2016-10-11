@@ -13,27 +13,27 @@
  *  Chat type
  */
 typedef enum{
-    EMChatTypeChat   = 0,   /*! Chat */
-    EMChatTypeGroupChat,    /*! Group chat */
-    EMChatTypeChatRoom,     /*! Chatroom chat */
+    EMChatTypeChat   = 0,   /*!  one to one chat type */
+    EMChatTypeGroupChat,    /*!  Group chat type */
+    EMChatTypeChatRoom,     /*!  Chatroom chat type */
 }EMChatType;
 
 /*!
  *   Message Status
  */
 typedef enum{
-    EMMessageStatusPending  = 0,    /*! Pending */
-    EMMessageStatusDelivering,      /*! Delivering */
-    EMMessageStatusSuccessed,       /*! Successed */
-    EMMessageStatusFailed,          /*! Failed */
+    EMMessageStatusPending  = 0,    /*!  Pending */
+    EMMessageStatusDelivering,      /*!  Delivering */
+    EMMessageStatusSuccessed,       /*!  Successed */
+    EMMessageStatusFailed,          /*!  Failed */
 }EMMessageStatus;
 
 /*!
  *  Message direction
  */
 typedef enum{
-    EMMessageDirectionSend = 0,    /*! Send */
-    EMMessageDirectionReceive,     /*! Receive */
+    EMMessageDirectionSend = 0,    /*!  Send */
+    EMMessageDirectionReceive,     /*!  Receive */
 }EMMessageDirection;
 
 /*!
@@ -57,12 +57,12 @@ typedef enum{
 @property (nonatomic) EMMessageDirection direction;
 
 /*!
- *  The sender
+ *  Message sender
  */
 @property (nonatomic, copy) NSString *from;
 
 /*!
- *  The receiver
+ *  Message receiver
  */
 @property (nonatomic, copy) NSString *to;
 
@@ -72,7 +72,7 @@ typedef enum{
 @property (nonatomic) long long timestamp;
 
 /*!
- *  The time of client send/received this message
+ *  The time of client send/receive the message
  */
 @property (nonatomic) long long localTime;
 
@@ -87,12 +87,12 @@ typedef enum{
 @property (nonatomic) EMMessageStatus status;
 
 /*!
- *  Whether read ack has been sent or received, it indicates whether has received read ack for sender, and whether has send read ack for receiver
+ *  Whether read acknowledgement has been sent or received, it indicates whether the sender has received a message read acknowledgement, or whether the recipient has sent a message read acknowledgement
  */
 @property (nonatomic) BOOL isReadAcked;
 
 /*!
- *  Whether delivery ack has been sent or received, it indicates whether has received delivery ack for send, and whether has send delivery ack for receiver, SDK will automatically send delivery ack if EMOptions has set enableDeliveryAck
+ *  Whether delivery acknowledgement has been sent or received, it indicates whether the sender has received a message deliver acknowledgement, or whether the recipient has sent a message deliver acknowledgement, SDK will automatically send delivery acknowledgement if EMOptions is set to enableDeliveryAck
  */
 @property (nonatomic) BOOL isDeliverAcked;
 
@@ -109,12 +109,12 @@ typedef enum{
 /*!
  *  Message extention
  *
- *  Key type must be NSString, Value type must be NSString or NSNumber of BOOL, int, unsigned in, long long, double.
+ *  Key type must be NSString, Value type must be NSString, int, unsigned in, long long, or double. Please use NSNumber (@YES or @NO) instead of BOOL.
  */
 @property (nonatomic, copy) NSDictionary *ext;
 
 /*!
- *  Initialize message instance
+ *  Initialize a message instance
  *
  *  @param aConversationId  Conversation id
  *  @param aFrom            The sender

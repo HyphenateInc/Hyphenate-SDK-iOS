@@ -8,29 +8,47 @@
 #import <Foundation/Foundation.h>
 
 /*!
- *  Chatroom
+ *  Chat room object
  */
 @interface EMChatroom : NSObject
 
 /*!
- *  Chatroom id
+ *  Chat room id
  */
 @property (nonatomic, copy, readonly) NSString *chatroomId;
 
 /*!
- *  Subject of chatroom
+ *  Subject of chat room
  */
 @property (nonatomic, copy, readonly) NSString *subject;
 
 /*!
- *  Description of chatroom
+ *  Description of chat room
  */
 @property (nonatomic, copy, readonly) NSString *description;
 
 /*!
- *  The maximum number of members
+ *  Owner of the chat room. Only one owner per chat room. 
  */
-@property (nonatomic, readonly) NSInteger maxOccupantsCount;
+@property (nonatomic, copy, readonly) NSString *owner;
+
+/*!
+ *  The total number of members in the chat room
+ */
+@property (nonatomic, readonly) NSInteger occupantsCount __deprecated_msg("Use - membersCount");
+@property (nonatomic, readonly) NSInteger membersCount;
+
+/*!
+ *  The capacity of the chat room
+ */
+@property (nonatomic, readonly) NSInteger maxOccupantsCount __deprecated_msg("Use - maxMembersCount");
+@property (nonatomic, readonly) NSInteger maxMembersCount;
+
+/*!
+ *  List of members in the chat room
+ */
+@property (nonatomic, copy, readonly) NSArray *occupants __deprecated_msg("Use - members");
+@property (nonatomic, copy, readonly) NSArray *members;
 
 /*!
  *  Initialize chatroom instance
@@ -42,7 +60,7 @@
 - (instancetype)init __deprecated_msg("Use +chatroomWithId:");
 
 /*!
- *  Create chatroom instance
+ *  Construct a chatroom instance with chatroom id
  *
  *  @param aChatroomId   Chatroom id
  *

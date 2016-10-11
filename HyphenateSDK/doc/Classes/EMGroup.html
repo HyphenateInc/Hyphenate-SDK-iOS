@@ -56,7 +56,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/bans">bans</option>
+		<option value="//api/name/)">)</option>
 		
 		<option value="//api/name/description">description</option>
 		
@@ -71,8 +71,6 @@
 		<option value="//api/name/members">members</option>
 		
 		<option value="//api/name/occupants">occupants</option>
-		
-		<option value="//api/name/occupantsCount">occupantsCount</option>
 		
 		<option value="//api/name/owner">owner</option>
 		
@@ -203,7 +201,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Group&rsquo;s subject, need to fetch group&rsquo;s specification</p>
+				<p>Subject of the group</p>
 			</div>
 			
 		    
@@ -220,7 +218,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Group&rsquo;s subject, need to fetch group&rsquo;s specification</p>
+				<p>Subject of the group</p>
 			</div>
 			
 
@@ -249,7 +247,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Group&rsquo;s description, need to fetch group&rsquo;s specification</p>
+				<p>Description of the group</p>
 			</div>
 			
 		    
@@ -266,7 +264,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Group&rsquo;s description, need to fetch group&rsquo;s specification</p>
+				<p>Description of the group</p>
 			</div>
 			
 
@@ -284,8 +282,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/occupantsCount" title="occupantsCount"></a>
-	<h3 class="method-title"><code><a href="#//api/name/occupantsCount">&nbsp;&nbsp;occupantsCount</a></code>
+	<a name="//api/name/)" title=")"></a>
+	<h3 class="method-title"><code><a href="#//api/name/)">&nbsp;&nbsp;)</a></code>
 </h3>
 
 	<div class="method-info">
@@ -295,12 +293,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The number of <a href="#//api/name/members">members</a>, need to fetch group&rsquo;s specification</p>
+				<p>The total number of group <a href="#//api/name/members">members</a></p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger occupantsCount</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger occupantsCount __deprecated_msg ( &quot;Use - membersCount&quot; )</code></div>
 
 		    
 			
@@ -312,7 +310,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The number of <a href="#//api/name/members">members</a>, need to fetch group&rsquo;s specification</p>
+				<p>The total number of group <a href="#//api/name/members">members</a></p>
 			</div>
 			
 
@@ -341,7 +339,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Group&rsquo;s setting options, need to fetch group&rsquo;s specification</p>
+				<p>Setting options of group</p>
 			</div>
 			
 		    
@@ -358,7 +356,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Group&rsquo;s setting options, need to fetch group&rsquo;s specification</p>
+				<p>Setting options of group</p>
 			</div>
 			
 
@@ -387,7 +385,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Group‘s owner, has the highest authority, need to fetch group&rsquo;s specification</p>
+				<p>Owner of the group</p>
 			</div>
 			
 		    
@@ -404,9 +402,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Group‘s owner, has the highest authority, need to fetch group&rsquo;s specification</p>
+				<p>Owner of the group</p>
 
-<p>A group only has one owner</p>
+<p>Each group only has one owner</p>
 			</div>
 			
 
@@ -435,7 +433,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Member list of group, need to fetch group&rsquo;s specification</p>
+				<p>Member list of the group</p>
 			</div>
 			
 		    
@@ -452,55 +450,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Member list of group, need to fetch group&rsquo;s specification</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMGroup.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/bans" title="bans"></a>
-	<h3 class="method-title"><code><a href="#//api/name/bans">&nbsp;&nbsp;bans</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Group‘s blacklist, need to call fetching group&rsquo;s blacklist method first</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *bans</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Group‘s blacklist, need to call fetching group&rsquo;s blacklist method first</p>
-
-<p>Need owner&rsquo;s authority, will return nil if user is not the <a href="#//api/name/owner">owner</a> of the group</p>
+				<p>Member list of the group</p>
 			</div>
 			
 
@@ -529,7 +479,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>All occupants of the group, include both the <a href="#//api/name/owner">owner</a> and all <a href="#//api/name/members">members</a></p>
+				<p>All occupants of the group, includes the group <a href="#//api/name/owner">owner</a> and all other group <a href="#//api/name/members">members</a></p>
 			</div>
 			
 		    
@@ -546,7 +496,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>All occupants of the group, include both the <a href="#//api/name/owner">owner</a> and all <a href="#//api/name/members">members</a></p>
+				<p>All occupants of the group, includes the group <a href="#//api/name/owner">owner</a> and all other group <a href="#//api/name/members">members</a></p>
 			</div>
 			
 
@@ -575,7 +525,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether this group receive push notifications</p>
+				<p>Is Apple Push Notification Service enabled for group</p>
 			</div>
 			
 		    
@@ -592,7 +542,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether this group receive push notifications</p>
+				<p>Is Apple Push Notification Service enabled for group</p>
 			</div>
 			
 
@@ -621,7 +571,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether is public group, need to fetch group&rsquo;s specification</p>
+				<p>Whether is a public group</p>
 			</div>
 			
 		    
@@ -638,7 +588,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether is public group, need to fetch group&rsquo;s specification</p>
+				<p>Whether is a public group</p>
 			</div>
 			
 
@@ -667,7 +617,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether block this group‘s message</p>
+				<p>Whether block the current group‘s messages</p>
 			</div>
 			
 		    
@@ -684,7 +634,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether block this group‘s message</p>
+				<p>Whether block the current group‘s messages</p>
 			</div>
 			
 
@@ -713,7 +663,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Initialize group instance</p>
+				<p>Initialize a group instance</p>
 			</div>
 			
 		    
@@ -735,7 +685,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Initialize group instance</p>
+				<p>Initialize a group instance</p>
 
 <p>Please use [+groupWithId:]</p>
 			</div>
@@ -766,7 +716,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get group instance, create a instance if do not exist</p>
+				<p>Get group instance, create a instance if it does not exist</p>
 			</div>
 			
 		    
@@ -800,7 +750,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get group instance, create a instance if do not exist</p>
+				<p>Get group instance, create a instance if it does not exist</p>
 			</div>
 			
 
@@ -832,7 +782,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

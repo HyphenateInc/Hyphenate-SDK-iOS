@@ -17,41 +17,50 @@
 @optional
 
 /*!
- *  User A will receive this callback after user B agreed user A's add-friend invitation
- *
- *  @param aUsername   User B
+ *  Delegate method will be invoked is a friend request is approved.
+ *   
+ *  User A will receive this callback after user B approved user A's friend request
+ *  @param aUsername   User who approves the friend's request
  */
-- (void)didReceiveAgreedFromUsername:(NSString *)aUsername;
+- (void)friendRequestDidApproveByUser:(NSString *)aUsername;
 
 /*!
- *  User A will receive this callback after user B declined user A's add-friend invitation
+ *  Delegate method will be invoked if a friend request is declined.
  *
- *  @param aUsername   User B
+ *  User A will receive this callback after user B declined user A's friend request
+ *
+ *  @param aUsername   User who declined the friend's request
  */
-- (void)didReceiveDeclinedFromUsername:(NSString *)aUsername;
+- (void)friendRequestDidDeclineByUser:(NSString *)aUsername;
 
 /*!
- *  User A will receive this callback after User B delete the friend relationship between user A
+ 
+ *  Delegate method will be invoked if user is removed as a contact by another user
  *
- *  @param aUsername   User B
+ *  User A will receive this callback after User B unfriended with user A
+ *
+ *  @param aUsername   User who unfriended the cureent user
  */
-- (void)didReceiveDeletedFromUsername:(NSString *)aUsername;
+- (void)friendshipDidRemoveByUser:(NSString *)aUsername;
 
 /*!
+ *  Delegate method will be invoked id the user is added as a contact by another user.
+ *
  *  Both user A and B will receive this callback after User B agreed user A's add-friend invitation
  *
  *  @param aUsername   Another user of user‘s friend relationship
  */
-- (void)didReceiveAddedFromUsername:(NSString *)aUsername;
+- (void)friendshipDidAddByUser:(NSString *)aUsername;
 
 /*!
- *  User A will receive this callback after user B requested to add user A as a friend
+ *  Delegate method will be invoked when user receives a friend request
  *
- *  @param aUsername   User B
- *  @param aMessage    Friend invitation message
+ *  User A will receive this callback when receiving a friend request from user B
+ *
+ *  @param aUsername   Friend request sender
+ *  @param aMessage    Friend request message
  */
-- (void)didReceiveFriendInvitationFromUsername:(NSString *)aUsername
-                                       message:(NSString *)aMessage;
-
+- (void)friendRequestDidReceiveFromUser:(NSString *)aUsername
+                                message:(NSString *)aMessage;
 
 @end

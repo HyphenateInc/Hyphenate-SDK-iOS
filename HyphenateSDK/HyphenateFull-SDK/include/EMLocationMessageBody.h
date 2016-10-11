@@ -15,12 +15,12 @@
 @interface EMLocationMessageBody : EMMessageBody
 
 /*!
- *  Latitude
+ *  Location latitude
  */
 @property (nonatomic) double latitude;
 
 /*!
- *  Longitude
+ *  Loctaion longitude
  */
 @property (nonatomic) double longitude;
 
@@ -30,7 +30,7 @@
 @property (nonatomic, copy) NSString *address;
 
 /*!
- *  Initialize location message body instance
+ *  Initialize a location message body instance
  *
  *  @param aLatitude   Latitude
  *  @param aLongitude  Longitude

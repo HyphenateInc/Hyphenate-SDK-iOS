@@ -18,11 +18,11 @@
 
 #else
 
-#import <HyphenateFull-SDK/EMClient.h>
-#import <HyphenateFull-SDK/EMClientDelegate.h>
-#import <HyphenateFull-SDK/EMClient+Call.h>
+#import <Hyphenate/EMClient.h>
+#import <Hyphenate/EMClientDelegate.h>
+#import <Hyphenate/EMClient+Call.h>
 
-#import <HyphenateFull-SDK/EMCallSession.h>
+#import <Hyphenate/EMCallSession.h>
 
 #endif
 

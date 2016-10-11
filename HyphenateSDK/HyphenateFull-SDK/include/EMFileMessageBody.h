@@ -10,13 +10,13 @@
 #import "EMMessageBody.h"
 
 /*!
- *  Download status of attachment
+ *  Message attachment download status
  */
 typedef enum{
-    EMDownloadStatusDownloading   = 0,  /*! Downloading */
-    EMDownloadStatusSuccessed,          /*! Successed */
-    EMDownloadStatusFailed,             /*! Failed */
-    EMDownloadStatusPending,            /*! Pending */
+    EMDownloadStatusDownloading   = 0,  /*!  Downloading */
+    EMDownloadStatusSuccessed,          /*!  Successed */
+    EMDownloadStatusFailed,             /*!  Failed */
+    EMDownloadStatusPending,            /*!  Pending */
 }EMDownloadStatus;
 
 /*!
@@ -40,7 +40,7 @@ typedef enum{
 @property (nonatomic, copy) NSString *remotePath;
 
 /*!
- *  Secret key of attachment, need verify secret key when download attachment
+ *  Secret key for downloading the message attachment
  */
 @property (nonatomic, copy) NSString *secretKey;
 
@@ -58,7 +58,7 @@ typedef enum{
  *   Initialize a file message body instance
  *
  *  @param aLocalPath   Local path of the attachment
- *  @param aDisplayName Display name of the attachment (NOT include file path)
+ *  @param aDisplayName Display name of the attachment
  *
  *  @result File message body instance
  */
@@ -69,7 +69,7 @@ typedef enum{
  *  Initialize a file message body instance
  *
  *  @param aData        The data of attachment file
- *  @param aDisplayName Display name of the attachment (NOT include file path)
+ *  @param aDisplayName Display name of the attachment
  *
  *  @result File message body instance
  */

@@ -20,7 +20,7 @@
 @property (nonatomic, copy, readonly) NSString *text;
 
 /*!
- *  Initialize text message body instance
+ *  Initialize a text message body instance
  *
  *  @param aText   Text content
  *

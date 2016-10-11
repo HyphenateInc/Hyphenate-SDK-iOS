@@ -1,6 +1,6 @@
 /*!
  *  @header IEMGroupManager.h
- *  @abstract This protocol defined the group operations
+ *  @abstract This protocol defines the group operations
  *  @author Hyphenate
  *  @version 3.00
  */
@@ -31,6 +31,13 @@
       delegateQueue:(dispatch_queue_t)aQueue;
 
 /*!
+ *  Add delegate
+ *
+ *  @param aDelegate  Delegate
+ */
+- (void)addDelegate:(id<EMGroupManagerDelegate>)aDelegate;
+
+/*!
  *  Remove delegate
  *
  *  @param aDelegate  Delegate
@@ -40,62 +47,51 @@
 #pragma mark - Get Group
 
 /*!
- *  Get all groups, will load from DB if not exist in memory
+ *  Get all groups
  *
  *  @result Group list<EMGroup>
+ *
  */
-- (NSArray *)getAllGroups;
+- (NSArray *)getJoinedGroups;
 
 /*!
- *  Load all groups from DB, will update group list in memory after loading
+ *  Get the list of groups which have disabled Apple Push Notification Service
  *
- *  @result Group list<EMGroup>
+ *  @param pError  Error
  */
-- (NSArray *)loadAllMyGroupsFromDB;
+- (NSArray *)getGroupsWithoutPushNotification:(EMError **)pError;
 
-/*!
- *  Get ID list of groups which block push from memory
- *
- *  @result Group id list<NSString>
- */
-- (NSArray *)getAllIgnoredGroupIds;
-
+#pragma mark - Async method
 
 /**
- *  Get all of user's groups from server, will update group list in memory and DB after success
+ *  Get all of user's groups from server
  *
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncGetMyGroupsFromServer:(void (^)(NSArray *aList))aSuccessBlock
-                           failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)getJoinedGroupsFromServerWithCompletion:(void (^)(NSArray *aList, EMError *aError))aCompletionBlock;
 
 /*!
- *  Get public groups in the specified range from the server
+ *  Get public groups with the specified range from the server
  *
  *  @param aCursor          Cursor, input nil the first time
- *  @param aPageSize        Expect result count, will return all results if < 0
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aPageSize        Expect result count, return all results if count is less than zero
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncGetPublicGroupsFromServerWithCursor:(NSString *)aCursor
-                                        pageSize:(NSInteger)aPageSize
-                                         success:(void (^)(EMCursorResult *aCursor))aSuccessBlock
-                                         failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)getPublicGroupsFromServerWithCursor:(NSString *)aCursor
+                                   pageSize:(NSInteger)aPageSize
+                                 completion:(void (^)(EMCursorResult *aResult, EMError *aError))aCompletionBlock;
 
 /*!
- *  Search public group with the id
+ *  Search public group with group id
  *
  *  @param aGroundId        Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncSearchPublicGroupWithId:(NSString *)aGroundId
-                             success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                             failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)searchPublicGroupWithId:(NSString *)aGroundId
+                     completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
  *  Create a group
@@ -105,276 +101,236 @@
  *  @param aInvitees        Group members, without creater
  *  @param aMessage         Invitation message
  *  @param aSetting         Group options
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncCreateGroupWithSubject:(NSString *)aSubject
-                        description:(NSString *)aDescription
-                           invitees:(NSArray *)aInvitees
-                            message:(NSString *)aMessage
-                            setting:(EMGroupOptions *)aSetting
-                            success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                            failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)createGroupWithSubject:(NSString *)aSubject
+                   description:(NSString *)aDescription
+                      invitees:(NSArray *)aInvitees
+                       message:(NSString *)aMessage
+                       setting:(EMGroupOptions *)aSetting
+                    completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Fetch group info
+ *  Fetch group specification
  *
  *  @param aGroupId              Group id
- *  @param aIncludeMembersList   Whether get member list
- *  @param aSuccessBlock         The callback block of success
- *  @param aFailureBlock         The callback block of failure
+ *  @param aIncludeMembersList   Whether to get member list
+ *  @param aCompletionBlock      The callback block of completion
  *
  */
-- (void)asyncFetchGroupInfo:(NSString *)aGroupId
-         includeMembersList:(BOOL)aIncludeMembersList
-                    success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                    failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)getGroupSpecificationFromServerByID:(NSString *)aGroupID
+                         includeMembersList:(BOOL)aIncludeMembersList
+                                 completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Get group‘s blacklist, need owner’s authority
+ *  Get group's blacklist, owner’s authority is required
  *
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncFetchGroupBansList:(NSString *)aGroupId
-                        success:(void (^)(NSArray *aList))aSuccessBlock
-                        failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)getGroupBlackListFromServerByID:(NSString *)aGroupId
+                             completion:(void (^)(NSArray *aList, EMError *aError))aCompletionBlock;
 
 /*!
  *  Invite User to join a group
  *
- *  @param aOccupants       Invited users
+ *  @param aUsers           Invited users
  *  @param aGroupId         Group id
- *  @param aWelcomeMessage  Welcome message
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aMessage         Welcome message
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncAddOccupants:(NSArray *)aOccupants
-                  toGroup:(NSString *)aGroupId
-           welcomeMessage:(NSString *)aWelcomeMessage
-                  success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                  failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)addMembers:(NSArray *)aUsers
+           toGroup:(NSString *)aGroupId
+           message:(NSString *)aMessage
+        completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Remove members from group, need owner‘s authority
+ *  Remove members from a group, owner‘s authority is required
  *
- *  @param aOccupants       Users to be removed
+ *  @param aUsers           Users to be removed
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncRemoveOccupants:(NSArray *)aOccupants
-                   fromGroup:(NSString *)aGroupId
-                     success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                     failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)removeMembers:(NSArray *)aUsers
+            fromGroup:(NSString *)aGroupId
+           completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Add users to group’s blacklist, need owner‘s authority
+ *  Add users to group blacklist, owner‘s authority is required
  *
- *  @param aOccupants       Users to be added
+ *  @param aMembers         Users to be added
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncBlockOccupants:(NSArray *)aOccupants
-                  fromGroup:(NSString *)aGroupId
-                    success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                    failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)blockMembers:(NSArray *)aMembers
+           fromGroup:(NSString *)aGroupId
+          completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Remove users from group‘s blacklist, need owner‘s authority
+ *  Remove users out of group blacklist, owner‘s authority is required
  *
- *  @param aOccupants       Users to be removed
+ *  @param aMembers         Users to be removed
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncUnblockOccupants:(NSArray *)aOccupants
-                     forGroup:(NSString *)aGroupId
-                      success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                      failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)unblockMembers:(NSArray *)aMembers
+             fromGroup:(NSString *)aGroupId
+            completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Change group’s subject, need owner‘s authority
+ *  Change the group subject, owner‘s authority is required
  *
  *  @param aSubject         New group‘s subject
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncChangeGroupSubject:(NSString *)aSubject
-                       forGroup:(NSString *)aGroupId
-                        success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                        failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)updateGroupSubject:(NSString *)aSubject
+                  forGroup:(NSString *)aGroupId
+                completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Change group’s description, need owner‘s authority
+ *  Change the group description, owner‘s authority is required
  *
  *  @param aDescription     New group‘s description
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncChangeDescription:(NSString *)aDescription
-                      forGroup:(NSString *)aGroupId
-                       success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                       failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)updateDescription:(NSString *)aDescription
+                 forGroup:(NSString *)aGroupId
+               completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
  *  Leave a group, owner can't leave the group, can only destroy the group
  *
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncLeaveGroup:(NSString *)aGroupId
-                success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)leaveGroup:(NSString *)aGroupId
+        completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Destroy a group, need owner‘s authority
+ *  Destroy a group, owner‘s authority is required
  *
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncDestroyGroup:(NSString *)aGroupId
-                  success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                  failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)destroyGroup:(NSString *)aGroupId
+          completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Block group’s message, server will blocks the messages of the group to user, owner can't block the group's message
+ *  Block group messages, server blocks the messages from the group, owner can't block the group's messages
  *
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncBlockGroup:(NSString *)aGroupId
-                success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)blockGroup:(NSString *)aGroupId
+        completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
  *  Unblock group message
  *
  *  @param aGroupId         Group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncUnblockGroup:(NSString *)aGroupId
-                  success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                  failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)unblockGroup:(NSString *)aGroupId
+          completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
  *  Join a public group, group style should be EMGroupStylePublicOpenJoin
  *
  *  @param aGroupId         Public group id
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncJoinPublicGroup:(NSString *)aGroupId
-                     success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                     failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)joinPublicGroup:(NSString *)aGroupId
+            completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Apply to join a public group, group style should be EMGroupStylePublicJoinNeedApproval
+ *  Request to join a public group, group style should be EMGroupStylePublicJoinNeedApproval
  *
  *  @param aGroupId         Public group id
  *  @param aMessage         Apply info
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncApplyJoinPublicGroup:(NSString *)aGroupId
-                          message:(NSString *)aMessage
-                          success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                          failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)requestToJoinPublicGroup:(NSString *)aGroupId
+                         message:(NSString *)aMessage
+                      completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Accept user's application, need owner‘s authority
+ *  Approve a group request, owner‘s authority is required
  *
  *  @param aGroupId         Group id
- *  @param aUsername        The applicant
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aUsername        Group request sender
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncAcceptJoinApplication:(NSString *)aGroupId
-                         applicant:(NSString *)aUsername
-                           success:(void (^)())aSuccessBlock
-                           failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)approveJoinGroupRequest:(NSString *)aGroupId
+                         sender:(NSString *)aUsername
+                     completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Decline user's application, need owner‘s authority
+ *  Decline a group request, owner‘s authority is required
  *
  *  @param aGroupId         Group id
- *  @param aUsername        The applicant
+ *  @param aUsername        Group request sender
  *  @param aReason          Decline reason
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncDeclineJoinApplication:(NSString *)aGroupId
-                          applicant:(NSString *)aUsername
-                             reason:(NSString *)aReason
-                            success:(void (^)())aSuccessBlock
-                            failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)declineJoinGroupRequest:(NSString *)aGroupId
+                        sender:(NSString *)aUsername
+                        reason:(NSString *)aReason
+                    completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
- *  Accept group's invitation
+ *  Accept a group invitation
  *
  *  @param groupId          Group id
  *  @param aUsername        Inviter
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncAcceptInvitationFromGroup:(NSString *)aGroupId
-                               inviter:(NSString *)aUsername
-                               success:(void (^)(EMGroup *aGroup))aSuccessBlock
-                               failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)acceptInvitationFromGroup:(NSString *)aGroupId
+                           inviter:(NSString *)aUsername
+                        completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 /*!
  *  Decline a group invitation
  *
  *  @param aGroupId         Group id
- *  @param aUsername        Inviter
+ *  @param aInviter         Inviter
  *  @param aReason          Decline reason
- *  @param aSuccessBlock    The callback block of success
- *  @param aFailureBlock    The callback block of failure
+ *  @param aCompletionBlock The callback block of completion
  *
  */
-- (void)asyncDeclineInvitationFromGroup:(NSString *)aGroupId
-                                inviter:(NSString *)aUsername
-                                 reason:(NSString *)aReason
-                                success:(void (^)())aSuccessBlock
-                                failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)declineGroupInvitation:(NSString *)aGroupId
+                       inviter:(NSString *)aInviter
+                        reason:(NSString *)aReason
+                    completion:(void (^)(EMError *aError))aCompletionBlock;
 
 /*!
  *  Block / unblock group message‘s push notification
  *
  *  @param aGroupId          Group id
- *  @param aIgnore           Whether block
- *  @param aSuccessBlock     The callback block of success
- *  @param aFailureBlock     The callback block of failure
+ *  @param aIsEnable         Whether enable
+ *  @param aCompletionBlock  The callback block of completion
  *
  */
-- (void)asyncIgnoreGroupPush:(NSString *)aGroupId
-                      ignore:(BOOL)aIsIgnore
-                     success:(void (^)())aSuccessBlock
-                     failure:(void (^)(EMError *aError))aFailureBlock;
+- (void)updatePushServiceForGroup:(NSString *)aGroupID
+                    isPushEnabled:(BOOL)aIsEnable
+                       completion:(void (^)(EMGroup *aGroup, EMError *aError))aCompletionBlock;
 
 @end

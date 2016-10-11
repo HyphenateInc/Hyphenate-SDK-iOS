@@ -60,23 +60,23 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/didJoinedGroup:inviter:message:">- didJoinedGroup:inviter:message:</option>
+		<option value="//api/name/didJoinGroup:inviter:message:">- didJoinGroup:inviter:message:</option>
 		
-		<option value="//api/name/didReceiveAcceptedGroupInvitation:invitee:">- didReceiveAcceptedGroupInvitation:invitee:</option>
+		<option value="//api/name/didLeaveGroup:reason:">- didLeaveGroup:reason:</option>
 		
-		<option value="//api/name/didReceiveAcceptedJoinGroup:">- didReceiveAcceptedJoinGroup:</option>
+		<option value="//api/name/groupInvitationDidAccept:invitee:">- groupInvitationDidAccept:invitee:</option>
 		
-		<option value="//api/name/didReceiveDeclinedGroupInvitation:invitee:reason:">- didReceiveDeclinedGroupInvitation:invitee:reason:</option>
+		<option value="//api/name/groupInvitationDidDecline:invitee:reason:">- groupInvitationDidDecline:invitee:reason:</option>
 		
-		<option value="//api/name/didReceiveDeclinedJoinGroup:reason:">- didReceiveDeclinedJoinGroup:reason:</option>
+		<option value="//api/name/groupInvitationDidReceive:inviter:message:">- groupInvitationDidReceive:inviter:message:</option>
 		
-		<option value="//api/name/didReceiveGroupInvitation:inviter:message:">- didReceiveGroupInvitation:inviter:message:</option>
+		<option value="//api/name/groupListDidUpdate:">- groupListDidUpdate:</option>
 		
-		<option value="//api/name/didReceiveJoinGroupApplication:applicant:reason:">- didReceiveJoinGroupApplication:applicant:reason:</option>
+		<option value="//api/name/joinGroupRequestDidApprove:">- joinGroupRequestDidApprove:</option>
 		
-		<option value="//api/name/didReceiveLeavedGroup:reason:">- didReceiveLeavedGroup:reason:</option>
+		<option value="//api/name/joinGroupRequestDidDecline:reason:">- joinGroupRequestDidDecline:reason:</option>
 		
-		<option value="//api/name/didUpdateGroupList:">- didUpdateGroupList:</option>
+		<option value="//api/name/joinGroupRequestDidReceive:user:reason:">- joinGroupRequestDidReceive:user:reason:</option>
 		
 	</optgroup>
 	
@@ -112,7 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Callbacks of group</p>
+						<p>Delegate</p>
 					</div>
 					
 					
@@ -128,8 +128,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/didReceiveGroupInvitation:inviter:message:" title="didReceiveGroupInvitation:inviter:message:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveGroupInvitation:inviter:message:">&ndash;&nbsp;didReceiveGroupInvitation:inviter:message:</a></code>
+	<a name="//api/name/groupInvitationDidReceive:inviter:message:" title="groupInvitationDidReceive:inviter:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupInvitationDidReceive:inviter:message:">&ndash;&nbsp;groupInvitationDidReceive:inviter:message:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -139,12 +139,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>After user A invites user B into the group, user B will receive this callback</p>
+				<p>Delegate method will be invoked when receiving a group invitation</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveGroupInvitation:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aInviter</em> message:(NSString *)<em>aMessage</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)groupInvitationDidReceive:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aInviter</em> message:(NSString *)<em>aMessage</em></code></div>
 
 		    
 			
@@ -164,7 +164,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aMessage</code></th>
-						<td><p>Invite message</p></td>
+						<td><p>Invitation message</p></td>
 					</tr>
 				
 				</table>
@@ -178,7 +178,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>After user A invites user B into the group, user B will receive this callback</p>
+				<p>Delegate method will be invoked when receiving a group invitation</p>
+
+<p>After user A invites user B into the group, user B will receive this callback</p>
 			</div>
 			
 
@@ -196,8 +198,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveAcceptedGroupInvitation:invitee:" title="didReceiveAcceptedGroupInvitation:invitee:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveAcceptedGroupInvitation:invitee:">&ndash;&nbsp;didReceiveAcceptedGroupInvitation:invitee:</a></code>
+	<a name="//api/name/groupInvitationDidAccept:invitee:" title="groupInvitationDidAccept:invitee:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupInvitationDidAccept:invitee:">&ndash;&nbsp;groupInvitationDidAccept:invitee:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -207,12 +209,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>After user B accepted user A‘s group invitation, user A will receive this callback</p>
+				<p>Delegate method will be invoked when the group invitation is accepted</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveAcceptedGroupInvitation:(EMGroup *)<em>aGroup</em> invitee:(NSString *)<em>aInvitee</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)groupInvitationDidAccept:(EMGroup *)<em>aGroup</em> invitee:(NSString *)<em>aInvitee</em></code></div>
 
 		    
 			
@@ -241,7 +243,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>After user B accepted user A‘s group invitation, user A will receive this callback</p>
+				<p>Delegate method will be invoked when the group invitation is accepted</p>
+
+<p>After user B accepted user A‘s group invitation, user A will receive this callback</p>
 			</div>
 			
 
@@ -259,8 +263,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveDeclinedGroupInvitation:invitee:reason:" title="didReceiveDeclinedGroupInvitation:invitee:reason:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveDeclinedGroupInvitation:invitee:reason:">&ndash;&nbsp;didReceiveDeclinedGroupInvitation:invitee:reason:</a></code>
+	<a name="//api/name/groupInvitationDidDecline:invitee:reason:" title="groupInvitationDidDecline:invitee:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupInvitationDidDecline:invitee:reason:">&ndash;&nbsp;groupInvitationDidDecline:invitee:reason:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -270,12 +274,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>After user B declined user A&rsquo;s group invitation, user A will receive the callback</p>
+				<p>Delegate method will be invoked when the group invitation is decliend.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveDeclinedGroupInvitation:(EMGroup *)<em>aGroup</em> invitee:(NSString *)<em>aInvitee</em> reason:(NSString *)<em>aReason</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)groupInvitationDidDecline:(EMGroup *)<em>aGroup</em> invitee:(NSString *)<em>aInvitee</em> reason:(NSString *)<em>aReason</em></code></div>
 
 		    
 			
@@ -309,7 +313,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>After user B declined user A&rsquo;s group invitation, user A will receive the callback</p>
+				<p>Delegate method will be invoked when the group invitation is decliend.</p>
+
+<p>After user B declined user A&rsquo;s group invitation, user A will receive the callback</p>
 			</div>
 			
 
@@ -327,8 +333,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didJoinedGroup:inviter:message:" title="didJoinedGroup:inviter:message:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didJoinedGroup:inviter:message:">&ndash;&nbsp;didJoinedGroup:inviter:message:</a></code>
+	<a name="//api/name/didJoinGroup:inviter:message:" title="didJoinGroup:inviter:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didJoinGroup:inviter:message:">&ndash;&nbsp;didJoinGroup:inviter:message:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -338,12 +344,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User B will receive this callback after SDK automatically accept user A&rsquo;s group invitation, need set EMOptions&rsquo;s isAutoAcceptGroupInvitation property to YES</p>
+				<p>Delegate method will be invoked after SDK automatically accepted the group invitation</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didJoinedGroup:(EMGroup *)<em>aGroup</em> inviter:(NSString *)<em>aInviter</em> message:(NSString *)<em>aMessage</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)didJoinGroup:(EMGroup *)<em>aGroup</em> inviter:(NSString *)<em>aInviter</em> message:(NSString *)<em>aMessage</em></code></div>
 
 		    
 			
@@ -353,7 +359,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aGroup</code></th>
-						<td><p>Group</p></td>
+						<td><p>Group instance</p></td>
 					</tr>
 				
 					<tr>
@@ -377,7 +383,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User B will receive this callback after SDK automatically accept user A&rsquo;s group invitation, need set EMOptions&rsquo;s isAutoAcceptGroupInvitation property to YES</p>
+				<p>Delegate method will be invoked after SDK automatically accepted the group invitation</p>
+
+<p>User B will receive this callback after SDK automatically accept user A&rsquo;s group invitation, need set EMOptions&rsquo;s isAutoAcceptGroupInvitation property to YES</p>
 			</div>
 			
 
@@ -395,8 +403,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveLeavedGroup:reason:" title="didReceiveLeavedGroup:reason:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveLeavedGroup:reason:">&ndash;&nbsp;didReceiveLeavedGroup:reason:</a></code>
+	<a name="//api/name/didLeaveGroup:reason:" title="didLeaveGroup:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didLeaveGroup:reason:">&ndash;&nbsp;didLeaveGroup:reason:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -406,12 +414,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback of leave group</p>
+				<p>Delegate method will be invoked when user leaves a group</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveLeavedGroup:(EMGroup *)<em>aGroup</em> reason:(EMGroupLeaveReason)<em>aReason</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)didLeaveGroup:(EMGroup *)<em>aGroup</em> reason:(EMGroupLeaveReason)<em>aReason</em></code></div>
 
 		    
 			
@@ -440,7 +448,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Callback of leave group</p>
+				<p>Delegate method will be invoked when user leaves a group</p>
 			</div>
 			
 
@@ -458,8 +466,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveJoinGroupApplication:applicant:reason:" title="didReceiveJoinGroupApplication:applicant:reason:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveJoinGroupApplication:applicant:reason:">&ndash;&nbsp;didReceiveJoinGroupApplication:applicant:reason:</a></code>
+	<a name="//api/name/joinGroupRequestDidReceive:user:reason:" title="joinGroupRequestDidReceive:user:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/joinGroupRequestDidReceive:user:reason:">&ndash;&nbsp;joinGroupRequestDidReceive:user:reason:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -469,12 +477,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Group&rsquo;s owner receive user&rsquo;s applicaton of joining group, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+				<p>Delegate method will be invoked when the group owner receives a group request and group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveJoinGroupApplication:(EMGroup *)<em>aGroup</em> applicant:(NSString *)<em>aApplicant</em> reason:(NSString *)<em>aReason</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)joinGroupRequestDidReceive:(EMGroup *)<em>aGroup</em> user:(NSString *)<em>aUsername</em> reason:(NSString *)<em>aReason</em></code></div>
 
 		    
 			
@@ -484,17 +492,17 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aGroup</code></th>
-						<td><p>Group</p></td>
+						<td><p>Group instance</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aApplicant</code></th>
-						<td><p>The applicant</p></td>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user initialized the group join request</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aReason</code></th>
-						<td><p>The applicant&rsquo;s message</p></td>
+						<td><p>The user&rsquo;s message</p></td>
 					</tr>
 				
 				</table>
@@ -508,7 +516,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Group&rsquo;s owner receive user&rsquo;s applicaton of joining group, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+				<p>Delegate method will be invoked when the group owner receives a group request and group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
 			</div>
 			
 
@@ -526,8 +534,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveDeclinedJoinGroup:reason:" title="didReceiveDeclinedJoinGroup:reason:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveDeclinedJoinGroup:reason:">&ndash;&nbsp;didReceiveDeclinedJoinGroup:reason:</a></code>
+	<a name="//api/name/joinGroupRequestDidDecline:reason:" title="joinGroupRequestDidDecline:reason:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/joinGroupRequestDidDecline:reason:">&ndash;&nbsp;joinGroupRequestDidDecline:reason:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -537,12 +545,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A will receive this callback after group&rsquo;s owner declined it&rsquo;s application, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+				<p>Delegate method will be invoked when the group owner declines a join group request</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveDeclinedJoinGroup:(NSString *)<em>aGroupId</em> reason:(NSString *)<em>aReason</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)joinGroupRequestDidDecline:(NSString *)<em>aGroupId</em> reason:(NSString *)<em>aReason</em></code></div>
 
 		    
 			
@@ -571,7 +579,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A will receive this callback after group&rsquo;s owner declined it&rsquo;s application, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+				<p>Delegate method will be invoked when the group owner declines a join group request</p>
+
+<p>User A will receive this callback after group&rsquo;s owner declined the group request, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
 			</div>
 			
 
@@ -589,8 +599,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didReceiveAcceptedJoinGroup:" title="didReceiveAcceptedJoinGroup:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveAcceptedJoinGroup:">&ndash;&nbsp;didReceiveAcceptedJoinGroup:</a></code>
+	<a name="//api/name/joinGroupRequestDidApprove:" title="joinGroupRequestDidApprove:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/joinGroupRequestDidApprove:">&ndash;&nbsp;joinGroupRequestDidApprove:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -600,12 +610,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User A will receive this callback after group&rsquo;s owner accepted it&rsquo;s application, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+				<p>Delegate method will be invoked when the group owner approves a join group request</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveAcceptedJoinGroup:(EMGroup *)<em>aGroup</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)joinGroupRequestDidApprove:(EMGroup *)<em>aGroup</em></code></div>
 
 		    
 			
@@ -629,7 +639,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>User A will receive this callback after group&rsquo;s owner accepted it&rsquo;s application, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
+				<p>Delegate method will be invoked when the group owner approves a join group request</p>
+
+<p>User A will receive this callback after group&rsquo;s owner approve the group request, group&rsquo;s style is EMGroupStylePublicJoinNeedApproval</p>
 			</div>
 			
 
@@ -647,8 +659,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/didUpdateGroupList:" title="didUpdateGroupList:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didUpdateGroupList:">&ndash;&nbsp;didUpdateGroupList:</a></code>
+	<a name="//api/name/groupListDidUpdate:" title="groupListDidUpdate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupListDidUpdate:">&ndash;&nbsp;groupListDidUpdate:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -658,12 +670,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Group List changed</p>
+				<p>Group List updated</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didUpdateGroupList:(NSArray *)<em>aGroupList</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)groupListDidUpdate:(NSArray *)<em>aGroupList</em></code></div>
 
 		    
 			
@@ -687,7 +699,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Group List changed</p>
+				<p>Group List updated</p>
 			</div>
 			
 
@@ -719,7 +731,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

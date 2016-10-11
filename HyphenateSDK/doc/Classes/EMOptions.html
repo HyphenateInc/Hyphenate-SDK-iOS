@@ -170,7 +170,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *appkey</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *appkey</code></div>
 
 		    
 			
@@ -368,7 +368,7 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Whether using development environment, default is NO</p>
 
-<p>Can only set when initialize sdk <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, can&rsquo;t change it in runtime</p>
+<p>Can only be set when initializing the sdk with <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, can&rsquo;t be altered in runtime.</p>
 			</div>
 			
 
@@ -416,7 +416,7 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Whether auto login, default is YES</p>
 
-<p>Value will be saved to the local. When initialization EMOptions, the first to get the value of the local saved</p>
+<p>Value is saved locally. When initializing the EMOptions, SDK looks for the local value first.</p>
 			</div>
 			
 
@@ -445,7 +445,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether delete all of the group&rsquo;s message when leave group, default is YES</p>
+				<p>Whether to delete all the group messages when leaving the group, default is YES</p>
 			</div>
 			
 		    
@@ -462,7 +462,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether delete all of the group&rsquo;s message when leave group, default is YES</p>
+				<p>Whether to delete all the group messages when leaving the group, default is YES</p>
 			</div>
 			
 
@@ -491,7 +491,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether delete all of the chatroom&rsquo;s message when leave chatroom, default is YES</p>
+				<p>Whether to delete all the chat room messages when leaving the chat room, default is YES</p>
 			</div>
 			
 		    
@@ -508,7 +508,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether delete all of the chatroom&rsquo;s message when leave chatroom, default is YES</p>
+				<p>Whether to delete all the chat room messages when leaving the chat room, default is YES</p>
 			</div>
 			
 
@@ -537,7 +537,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether chatroom&rsquo;s owner can leave chatroom, default is YES</p>
+				<p>Whether chat room&rsquo;s owner can leave the chat room, default is YES.</p>
 			</div>
 			
 		    
@@ -554,7 +554,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether chatroom&rsquo;s owner can leave chatroom, default is YES</p>
+				<p>Whether chat room&rsquo;s owner can leave the chat room, default is YES.</p>
 			</div>
 			
 
@@ -583,7 +583,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether automatically accept group invitation, default is YES</p>
+				<p>Whether to automatically accept group invitation, default is YES</p>
 			</div>
 			
 		    
@@ -600,7 +600,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether automatically accept group invitation, default is YES</p>
+				<p>Whether to automatically accept group invitation, default is YES</p>
 			</div>
 			
 
@@ -629,7 +629,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether automatically accept friend invitation, default is NO</p>
+				<p>Whether to automatically approve friend request, default is NO</p>
 			</div>
 			
 		    
@@ -646,7 +646,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether automatically accept friend invitation, default is NO</p>
+				<p>Whether to automatically approve friend request, default is NO</p>
 			</div>
 			
 
@@ -675,7 +675,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether send delivery ack, default is NO, SDK will automatically send delivery ack when receive a single chat message if it&rsquo;s set to YES</p>
+				<p>Whether to send delivery acknowledgement, default is NO. If set to YES, SDK will automatically send a delivery acknowledgement when receiving a chat message</p>
 			</div>
 			
 		    
@@ -692,7 +692,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether send delivery ack, default is NO, SDK will automatically send delivery ack when receive a single chat message if it&rsquo;s set to YES</p>
+				<p>Whether to send delivery acknowledgement, default is NO. If set to YES, SDK will automatically send a delivery acknowledgement when receiving a chat message</p>
 			</div>
 			
 
@@ -721,7 +721,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether sort message by server time when load message from database, default is YES, sort by server time</p>
+				<p>Whether to sort messages by server received time when loading message from database, default is YES.</p>
 			</div>
 			
 		    
@@ -738,7 +738,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether sort message by server time when load message from database, default is YES, sort by server time</p>
+				<p>Whether to sort messages by server received time when loading message from database, default is YES.</p>
 			</div>
 			
 
@@ -767,12 +767,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>iOS only, push certificate name</p>
+				<p>Certificate name of Apple Push Notification Service</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *apnsCertName</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *apnsCertName</code></div>
 
 		    
 			
@@ -784,9 +784,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>iOS only, push certificate name</p>
+				<p>Certificate name of Apple Push Notification Service</p>
 
-<p>Can only set when initialize SDK <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, can&rsquo;t change it in runtime</p>
+<p>Can only be set when initializing the SDK with <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, can&rsquo;t be altered in runtime.</p>
 			</div>
 			
 
@@ -815,7 +815,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get SDK setting options instance</p>
+				<p>Get a SDK setting options instance</p>
 			</div>
 			
 		    
@@ -849,7 +849,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get SDK setting options instance</p>
+				<p>Get a SDK setting options instance</p>
 			</div>
 			
 
@@ -886,7 +886,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether allow to use DNS, default is YES</p>
+				<p>Whether to allow using DNS, default is YES</p>
 			</div>
 			
 		    
@@ -903,9 +903,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Whether allow to use DNS, default is YES</p>
+				<p>Whether to allow using DNS, default is YES</p>
 
-<p>Can only set when initialize SDK <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, can&rsquo;t change it in runtime</p>
+<p>Can only be set when initializing the SDK <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, cannot be altered in runtime</p>
 			</div>
 			
 
@@ -953,7 +953,8 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>IM server port</p>
 
-<p>It&rsquo;s effective only when enableDnsConfig is NO. Can only set when initialize SDK <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, can&rsquo;t change it in runtime</p>
+<p>chatPort is Only effective when isDNSEnabled is NO.
+Can only be set when initializing the SDK with <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, cannot be altered in runtime</p>
 			</div>
 			
 
@@ -987,7 +988,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *chatServer</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *chatServer</code></div>
 
 		    
 			
@@ -1001,7 +1002,7 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>IM server</p>
 
-<p>It&rsquo;s effective only when enableDnsConfig is NO. Can only set when initialize SDK <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, can&rsquo;t change it in runtime</p>
+<p>chatServer is Only effective when isDNSEnabled is NO. Can only be set when initializing the SDK with <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, cannot be altered in runtime</p>
 			</div>
 			
 
@@ -1035,7 +1036,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *restServer</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *restServer</code></div>
 
 		    
 			
@@ -1049,7 +1050,7 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>REST server</p>
 
-<p>It&rsquo;s effective only when enableDnsConfig is NO. Can only set when initialize SDK <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, can&rsquo;t change it in runtime</p>
+<p>restServer Only effective when isDNSEnabled is NO. Can only be set when initializing the SDK with <a href="../Classes/EMClient.html#//api/name/initializeSDKWithOptions:">[EMClient initializeSDKWithOptions:]</a>, cannot be altered in runtime</p>
 			</div>
 			
 
@@ -1081,7 +1082,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-06-07</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-08-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

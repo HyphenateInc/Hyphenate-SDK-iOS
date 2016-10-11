@@ -1,6 +1,6 @@
 /*!
  *  @header IEMCallManager.h
- *  @abstract This protocol defined the operations of real time voice/video call
+ *  @abstract This protocol defines the operations of real time voice/video call
  *  @author Hyphenate
  *  @version 3.00
  */
@@ -31,6 +31,14 @@
       delegateQueue:(dispatch_queue_t)aQueue;
 
 /*!
+ *  Add delegate
+ *
+ *  @param aDelegate  Delegate
+ *
+ */
+- (void)addDelegate:(id<EMCallManagerDelegate>)aDelegate;
+
+/*!
  *  Remove delegate
  *
  *  @param aDelegate  Delegate
@@ -40,7 +48,7 @@
 #pragma mark - Answer and End
 
 /*!
- *  Receiver answer the call
+ *  Recipient answer the incoming call
  *
  *  @param  aSessionId Session Id
  *
@@ -60,88 +68,60 @@
 #pragma mark - voice
 
 /*!
- *  Start a voice call session
+ *  Start a voice call
  *
- *  @param aUsername  The callee
- *  @param pError     Error
+ *  @param aUsername        The callee
+ *  @param aCompletionBlock The callback of completion
  *
- *  @result Session instance
  */
-- (EMCallSession *)makeVoiceCall:(NSString *)aUsername
-                           error:(EMError **)pError;
+- (void)startVoiceCall:(NSString *)aUsername
+            completion:(void (^)(EMCallSession *aCallSession, EMError *aError))aCompletionBlock;
 
 /*!
- *  Get video package lost rate
- *
- *  @param aSessionId   Session ID
- *  @param aIsSilence   Is Silence
- *
- *  @result             Error
- */
-- (EMError *)markCallSession:(NSString *)aSessionId
-                   isSilence:(BOOL)aIsSilence;
-
-/*!
- *  Suspend voice data transmission
+ *  Pause voice streaming
  *
  *  @param aSessionId   Session ID
  */
-- (void)pauseVoiceTransfer:(NSString *)aSessionId;
+- (void)pauseVoiceWithSession:(NSString *)aSessionId error:(EMError**)pError;
 
 /*!
- *  Resume voice data transmission
+ *  Resume voice streaming
  *
  *  @param aSessionId   Session ID
  */
-- (void)resumeVoiceTransfer:(NSString *)aSessionId;
-
+- (void)resumeVoiceWithSession:(NSString *)aSessionId error:(EMError**)pError;
 
 #pragma mark - video
 
 /*!
- *  Start a video call session
+ *  Start a video call
  *
- *  @param aUsername  The callee
- *  @param pError     Error
+ *  @param aUsername        The callee
+ *  @param aSuccessBlock    The callback block of completion
  *
- *  @result Session instance
  */
-- (EMCallSession *)makeVideoCall:(NSString *)aUsername
-                           error:(EMError **)pError;
+- (void)startVideoCall:(NSString *)aUsername
+            completion:(void (^)(EMCallSession *aCallSession, EMError *aError))aCompletionBlock;
 
 /*!
- * Suspend video data transmission
+ * Pause video streaming
  *
  *  @param aSessionId   Session ID
  */
-- (void)pauseVideoTransfer:(NSString *)aSessionId;
+- (void)pauseVideoWithSession:(NSString *)aSessionId error:(EMError**)pError;
 
 /*!
- *  Resume video data transmission
+ *  Resume video streaming
  *
  *  @param aSessionId   Session ID
  */
-- (void)resumeVideoTransfer:(NSString *)aSessionId;
+- (void)resumeVideoWithSession:(NSString *)aSessionId error:(EMError**)pError;
 
 /*!
- * Suspend voice and video data transmission
+ *  Enable video adaptive, default is disable
  *
- *  @param aSessionId   Session ID
+ *  @param isAdaptive   YES is enable, NO is disable
  */
-- (void)pauseVoiceAndVideoTransfer:(NSString *)aSessionId;
-
-/*!
- *  Resume voice and video data transmission
- *
- *  @param aSessionId   Session ID
- */
-- (void)resumeVoiceAndVideoTransfer:(NSString *)aSessionId;
-
-/*!
- *  open or close video adaptive,default is close
- *
- *  @param aFlag   YES is open,NO is close
- */
-- (void)setVideoAdaptive:(BOOL)aFlag;
+- (void)enableAdaptiveBirateStreaming:(BOOL)isAdaptive;
 
 @end
