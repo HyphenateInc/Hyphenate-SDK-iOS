@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">HyphenateSDK </a>
+				<a href="../index.html">Hyphenate </a>
 			</h1>
 
 			<p id="developer-home">
@@ -64,13 +64,33 @@
 		
 		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
 		
+		<option value="//api/name/asyncFetchChatroomInfo:includeMembersList:success:failure:">- asyncFetchChatroomInfo:includeMembersList:success:failure:</option>
+		
+		<option value="//api/name/asyncGetAllChatroomsFromServer:failure:">- asyncGetAllChatroomsFromServer:failure:</option>
+		
+		<option value="//api/name/asyncJoinChatroom:success:failure:">- asyncJoinChatroom:success:failure:</option>
+		
+		<option value="//api/name/asyncLeaveChatroom:success:failure:">- asyncLeaveChatroom:success:failure:</option>
+		
+		<option value="//api/name/fetchChatroomInfo:includeMembersList:error:">- fetchChatroomInfo:includeMembersList:error:</option>
+		
+		<option value="//api/name/getAllChatroomsFromServerWithCompletion:">- getAllChatroomsFromServerWithCompletion:</option>
+		
+		<option value="//api/name/getAllChatroomsFromServerWithError:">- getAllChatroomsFromServerWithError:</option>
+		
 		<option value="//api/name/getChatroomSpecificationFromServerByID:includeMembersList:completion:">- getChatroomSpecificationFromServerByID:includeMembersList:completion:</option>
 		
 		<option value="//api/name/getChatroomsFromServerWithPage:pageSize:completion:">- getChatroomsFromServerWithPage:pageSize:completion:</option>
 		
+		<option value="//api/name/getChatroomsFromServerWithPage:pageSize:error:">- getChatroomsFromServerWithPage:pageSize:error:</option>
+		
 		<option value="//api/name/joinChatroom:completion:">- joinChatroom:completion:</option>
 		
+		<option value="//api/name/joinChatroom:error:">- joinChatroom:error:</option>
+		
 		<option value="//api/name/leaveChatroom:completion:">- leaveChatroom:completion:</option>
+		
+		<option value="//api/name/leaveChatroom:error:">- leaveChatroom:error:</option>
 		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
 		
@@ -286,6 +306,286 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Remove delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getChatroomsFromServerWithPage:pageSize:error:" title="getChatroomsFromServerWithPage:pageSize:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getChatroomsFromServerWithPage:pageSize:error:">&ndash;&nbsp;getChatroomsFromServerWithPage:pageSize:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get pagesize number chatroom from server.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMPageResult *)getChatroomsFromServerWithPage:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Chat room list<a href="../Classes/EMChatroom.html">EMChatroom</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get pagesize number chatroom from server.</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/joinChatroom:error:" title="joinChatroom:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/joinChatroom:error:">&ndash;&nbsp;joinChatroom:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Join a chatroom</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMChatroom *)joinChatroom:(NSString *)<em>aChatroomId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Joined chatroom</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Join a chatroom</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/leaveChatroom:error:" title="leaveChatroom:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/leaveChatroom:error:">&ndash;&nbsp;leaveChatroom:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Leave a chatroom</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMChatroom *)leaveChatroom:(NSString *)<em>aChatroomId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Leaved chatroom</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Leave a chatroom</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchChatroomInfo:includeMembersList:error:" title="fetchChatroomInfo:includeMembersList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchChatroomInfo:includeMembersList:error:">&ndash;&nbsp;fetchChatroomInfo:includeMembersList:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch chatroom&rsquo;s specification</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMChatroom *)fetchChatroomInfo:(NSString *)<em>aChatroomId</em> includeMembersList:(BOOL)<em>aIncludeMembersList</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIncludeMembersList</code></th>
+						<td><p>Whether to get member list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Chatroom instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch chatroom&rsquo;s specification</p>
+
+<p>Synchronization method, will block the current thread</p>
 			</div>
 			
 
@@ -554,6 +854,406 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllChatroomsFromServerWithError:" title="getAllChatroomsFromServerWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllChatroomsFromServerWithError:">&ndash;&nbsp;getAllChatroomsFromServerWithError:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the chatrooms from server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getAllChatroomsFromServerWithError:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Chat room list<a href="../Classes/EMChatroom.html">EMChatroom</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the chatrooms from server</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllChatroomsFromServerWithCompletion:" title="getAllChatroomsFromServerWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllChatroomsFromServerWithCompletion:">&ndash;&nbsp;getAllChatroomsFromServerWithCompletion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the chatrooms from server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getAllChatroomsFromServerWithCompletion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the chatrooms from server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncGetAllChatroomsFromServer:failure:" title="asyncGetAllChatroomsFromServer:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncGetAllChatroomsFromServer:failure:">&ndash;&nbsp;asyncGetAllChatroomsFromServer:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the chatrooms from server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncGetAllChatroomsFromServer:(void ( ^ ) ( NSArray *aList ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the chatrooms from server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncJoinChatroom:success:failure:" title="asyncJoinChatroom:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncJoinChatroom:success:failure:">&ndash;&nbsp;asyncJoinChatroom:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Join a chatroom</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncJoinChatroom:(NSString *)<em>aChatroomId</em> success:(void ( ^ ) ( EMChatroom *aRoom ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Join a chatroom</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncLeaveChatroom:success:failure:" title="asyncLeaveChatroom:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncLeaveChatroom:success:failure:">&ndash;&nbsp;asyncLeaveChatroom:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Leave a chatroom</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncLeaveChatroom:(NSString *)<em>aChatroomId</em> success:(void ( ^ ) ( EMChatroom *aRoom ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Leaved chatroom</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Leave a chatroom</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncFetchChatroomInfo:includeMembersList:success:failure:" title="asyncFetchChatroomInfo:includeMembersList:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncFetchChatroomInfo:includeMembersList:success:failure:">&ndash;&nbsp;asyncFetchChatroomInfo:includeMembersList:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch chatroom&rsquo;s specification</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncFetchChatroomInfo:(NSString *)<em>aChatroomId</em> includeMembersList:(BOOL)<em>aIncludeMembersList</em> success:(void ( ^ ) ( EMChatroom *aChatroom ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIncludeMembersList</code></th>
+						<td><p>Whether get member list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch chatroom&rsquo;s specification</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -569,7 +1269,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-12-30</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
