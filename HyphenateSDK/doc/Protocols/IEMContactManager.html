@@ -239,64 +239,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Add delegate</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMContactManagerDelegate&gt;)<em>aDelegate</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDelegate</code></th>
-						<td><p>Delegate</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add delegate</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -503,6 +445,8 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Get all the contacts from the server</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -571,6 +515,8 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Add a contact with invitation message</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -639,6 +585,8 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Delete a contact</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -702,6 +650,8 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Get the blacklist from the server</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -770,6 +720,8 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Add a user to blacklist</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -833,6 +785,8 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Remove user out of blacklist</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -896,6 +850,8 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Accept a friend request</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -963,6 +919,8 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Decline a friend request</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -1484,6 +1442,64 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMContactManagerDelegate&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/getContactsFromDB" title="getContactsFromDB"></a>
 	<h3 class="method-title"><code><a href="#//api/name/getContactsFromDB">&ndash;&nbsp;getContactsFromDB</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -1768,6 +1784,8 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Delete a contact</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -2270,7 +2288,7 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-12-30</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-05-03</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

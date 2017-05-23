@@ -66,6 +66,10 @@
 		
 		<option value="//api/name/acceptJoinApplication:applicant:">- acceptJoinApplication:applicant:</option>
 		
+		<option value="//api/name/addAdmin:toGroup:completion:">- addAdmin:toGroup:completion:</option>
+		
+		<option value="//api/name/addAdmin:toGroup:error:">- addAdmin:toGroup:error:</option>
+		
 		<option value="//api/name/addDelegate:">- addDelegate:</option>
 		
 		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
@@ -148,9 +152,13 @@
 		
 		<option value="//api/name/declineJoinGroupRequest:sender:reason:completion:">- declineJoinGroupRequest:sender:reason:completion:</option>
 		
+		<option value="//api/name/destroyGroup:">- destroyGroup:</option>
+		
 		<option value="//api/name/destroyGroup:completion:">- destroyGroup:completion:</option>
 		
 		<option value="//api/name/destroyGroup:error:">- destroyGroup:error:</option>
+		
+		<option value="//api/name/destroyGroup:finishCompletion:">- destroyGroup:finishCompletion:</option>
 		
 		<option value="//api/name/fetchGroupBansList:error:">- fetchGroupBansList:error:</option>
 		
@@ -162,13 +170,33 @@
 		
 		<option value="//api/name/getGroupBlackListFromServerByID:completion:">- getGroupBlackListFromServerByID:completion:</option>
 		
+		<option value="//api/name/getGroupBlacklistFromServerWithId:pageNumber:pageSize:completion:">- getGroupBlacklistFromServerWithId:pageNumber:pageSize:completion:</option>
+		
+		<option value="//api/name/getGroupBlacklistFromServerWithId:pageNumber:pageSize:error:">- getGroupBlacklistFromServerWithId:pageNumber:pageSize:error:</option>
+		
+		<option value="//api/name/getGroupMemberListFromServerWithId:cursor:pageSize:completion:">- getGroupMemberListFromServerWithId:cursor:pageSize:completion:</option>
+		
+		<option value="//api/name/getGroupMemberListFromServerWithId:cursor:pageSize:error:">- getGroupMemberListFromServerWithId:cursor:pageSize:error:</option>
+		
+		<option value="//api/name/getGroupMuteListFromServerWithId:pageNumber:pageSize:completion:">- getGroupMuteListFromServerWithId:pageNumber:pageSize:completion:</option>
+		
+		<option value="//api/name/getGroupMuteListFromServerWithId:pageNumber:pageSize:error:">- getGroupMuteListFromServerWithId:pageNumber:pageSize:error:</option>
+		
 		<option value="//api/name/getGroupSpecificationFromServerByID:includeMembersList:completion:">- getGroupSpecificationFromServerByID:includeMembersList:completion:</option>
+		
+		<option value="//api/name/getGroupSpecificationFromServerWithId:completion:">- getGroupSpecificationFromServerWithId:completion:</option>
+		
+		<option value="//api/name/getGroupSpecificationFromServerWithId:error:">- getGroupSpecificationFromServerWithId:error:</option>
 		
 		<option value="//api/name/getGroupsWithoutPushNotification:">- getGroupsWithoutPushNotification:</option>
 		
 		<option value="//api/name/getJoinedGroups">- getJoinedGroups</option>
 		
 		<option value="//api/name/getJoinedGroupsFromServerWithCompletion:">- getJoinedGroupsFromServerWithCompletion:</option>
+		
+		<option value="//api/name/getJoinedGroupsFromServerWithPage:pageSize:completion:">- getJoinedGroupsFromServerWithPage:pageSize:completion:</option>
+		
+		<option value="//api/name/getJoinedGroupsFromServerWithPage:pageSize:error:">- getJoinedGroupsFromServerWithPage:pageSize:error:</option>
 		
 		<option value="//api/name/getMyGroupsFromServerWithError:">- getMyGroupsFromServerWithError:</option>
 		
@@ -187,6 +215,14 @@
 		<option value="//api/name/leaveGroup:error:">- leaveGroup:error:</option>
 		
 		<option value="//api/name/loadAllMyGroupsFromDB">- loadAllMyGroupsFromDB</option>
+		
+		<option value="//api/name/muteMembers:muteMilliseconds:fromGroup:completion:">- muteMembers:muteMilliseconds:fromGroup:completion:</option>
+		
+		<option value="//api/name/muteMembers:muteMilliseconds:fromGroup:error:">- muteMembers:muteMilliseconds:fromGroup:error:</option>
+		
+		<option value="//api/name/removeAdmin:fromGroup:completion:">- removeAdmin:fromGroup:completion:</option>
+		
+		<option value="//api/name/removeAdmin:fromGroup:error:">- removeAdmin:fromGroup:error:</option>
 		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
 		
@@ -208,7 +244,15 @@
 		
 		<option value="//api/name/unblockOccupants:forGroup:error:">- unblockOccupants:forGroup:error:</option>
 		
+		<option value="//api/name/unmuteMembers:fromGroup:completion:">- unmuteMembers:fromGroup:completion:</option>
+		
+		<option value="//api/name/unmuteMembers:fromGroup:error:">- unmuteMembers:fromGroup:error:</option>
+		
 		<option value="//api/name/updateDescription:forGroup:completion:">- updateDescription:forGroup:completion:</option>
+		
+		<option value="//api/name/updateGroupOwner:newOwner:completion:">- updateGroupOwner:newOwner:completion:</option>
+		
+		<option value="//api/name/updateGroupOwner:newOwner:error:">- updateGroupOwner:newOwner:error:</option>
 		
 		<option value="//api/name/updateGroupSubject:forGroup:completion:">- updateGroupSubject:forGroup:completion:</option>
 		
@@ -296,64 +340,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aQueue</code></th>
 						<td><p>The queue of call delegate method</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add delegate</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Add delegate</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMGroupManagerDelegate&gt;)<em>aDelegate</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDelegate</code></th>
-						<td><p>Delegate</p></td>
 					</tr>
 				
 				</table>
@@ -552,8 +538,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getMyGroupsFromServerWithError:" title="getMyGroupsFromServerWithError:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getMyGroupsFromServerWithError:">&ndash;&nbsp;getMyGroupsFromServerWithError:</a></code>
+	<a name="//api/name/getJoinedGroupsFromServerWithPage:pageSize:error:" title="getJoinedGroupsFromServerWithPage:pageSize:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getJoinedGroupsFromServerWithPage:pageSize:error:">&ndash;&nbsp;getJoinedGroupsFromServerWithPage:pageSize:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -563,18 +549,28 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get all of user&rsquo;s groups from server</p>
+				<p>Get pagesize number group from server.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSArray *)getMyGroupsFromServerWithError:(EMError **)<em>pError</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getJoinedGroupsFromServerWithPage:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> error:(EMError **)<em>pError</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageNum</code></th>
+						<td><p>Page number</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>pError</code></th>
@@ -597,9 +593,77 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get all of user&rsquo;s groups from server</p>
+				<p>Get pagesize number group from server.</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getJoinedGroupsFromServerWithPage:pageSize:completion:" title="getJoinedGroupsFromServerWithPage:pageSize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getJoinedGroupsFromServerWithPage:pageSize:completion:">&ndash;&nbsp;getJoinedGroupsFromServerWithPage:pageSize:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the groups from server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getJoinedGroupsFromServerWithPage:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> completion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageNum</code></th>
+						<td><p>Page number</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the groups from server</p>
 			</div>
 			
 
@@ -692,6 +756,74 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/getPublicGroupsFromServerWithCursor:pageSize:completion:" title="getPublicGroupsFromServerWithCursor:pageSize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPublicGroupsFromServerWithCursor:pageSize:completion:">&ndash;&nbsp;getPublicGroupsFromServerWithCursor:pageSize:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get public groups with the specified range from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getPublicGroupsFromServerWithCursor:(NSString *)<em>aCursor</em> pageSize:(NSInteger)<em>aPageSize</em> completion:(void ( ^ ) ( EMCursorResult *aResult , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCursor</code></th>
+						<td><p>Cursor, input nil the first time</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Expect result count, return all results if count is less than zero</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get public groups with the specified range from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/searchPublicGroupWithId:error:" title="searchPublicGroupWithId:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/searchPublicGroupWithId:error:">&ndash;&nbsp;searchPublicGroupWithId:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -745,6 +877,69 @@
 				<p>Search a public group with the id</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchPublicGroupWithId:completion:" title="searchPublicGroupWithId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchPublicGroupWithId:completion:">&ndash;&nbsp;searchPublicGroupWithId:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Search public group with group id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchPublicGroupWithId:(NSString *)<em>aGroundId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroundId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Search public group with group id</p>
 			</div>
 			
 
@@ -852,8 +1047,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fetchGroupInfo:includeMembersList:error:" title="fetchGroupInfo:includeMembersList:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fetchGroupInfo:includeMembersList:error:">&ndash;&nbsp;fetchGroupInfo:includeMembersList:error:</a></code>
+	<a name="//api/name/createGroupWithSubject:description:invitees:message:setting:completion:" title="createGroupWithSubject:description:invitees:message:setting:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createGroupWithSubject:description:invitees:message:setting:completion:">&ndash;&nbsp;createGroupWithSubject:description:invitees:message:setting:completion:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -863,12 +1058,95 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Fetch group info</p>
+				<p>Create a group</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (EMGroup *)fetchGroupInfo:(NSString *)<em>aGroupId</em> includeMembersList:(BOOL)<em>aIncludeMembersList</em> error:(EMError **)<em>pError</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)createGroupWithSubject:(NSString *)<em>aSubject</em> description:(NSString *)<em>aDescription</em> invitees:(NSArray *)<em>aInvitees</em> message:(NSString *)<em>aMessage</em> setting:(EMGroupOptions *)<em>aSetting</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSubject</code></th>
+						<td><p>Group subject</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDescription</code></th>
+						<td><p>Group description</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aInvitees</code></th>
+						<td><p>Group members, without creater</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Invitation message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSetting</code></th>
+						<td><p>Group options</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Create a group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupSpecificationFromServerWithId:error:" title="getGroupSpecificationFromServerWithId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupSpecificationFromServerWithId:error:">&ndash;&nbsp;getGroupSpecificationFromServerWithId:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch group info，include ID, name, description，setting, owner, admins</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)getGroupSpecificationFromServerWithId:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
 
 		    
 			
@@ -879,11 +1157,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aGroupId</code></th>
 						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aIncludeMembersList</code></th>
-						<td><p>Whether to get member list</p></td>
 					</tr>
 				
 					<tr>
@@ -907,7 +1180,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Fetch group info</p>
+				<p>Fetch group info，include ID, name, description，setting, owner, admins</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -927,8 +1200,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fetchGroupBansList:error:" title="fetchGroupBansList:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fetchGroupBansList:error:">&ndash;&nbsp;fetchGroupBansList:error:</a></code>
+	<a name="//api/name/getGroupSpecificationFromServerWithId:completion:" title="getGroupSpecificationFromServerWithId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupSpecificationFromServerWithId:completion:">&ndash;&nbsp;getGroupSpecificationFromServerWithId:completion:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -938,12 +1211,75 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get group‘s blacklist, required owner’s authority</p>
+				<p>Fetch group specification，include ID, name, description，setting, owner, admins</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSArray *)fetchGroupBansList:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)getGroupSpecificationFromServerWithId:(NSString *)<em>aGroupID</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch group specification，include ID, name, description，setting, owner, admins</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupMemberListFromServerWithId:cursor:pageSize:error:" title="getGroupMemberListFromServerWithId:cursor:pageSize:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupMemberListFromServerWithId:cursor:pageSize:error:">&ndash;&nbsp;getGroupMemberListFromServerWithId:cursor:pageSize:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the list of group members from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMCursorResult *)getGroupMemberListFromServerWithId:(NSString *)<em>aGroupId</em> cursor:(NSString *)<em>aCursor</em> pageSize:(NSInteger)<em>aPageSize</em> error:(EMError **)<em>pError</em></code></div>
 
 		    
 			
@@ -954,6 +1290,16 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aGroupId</code></th>
 						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCursor</code></th>
+						<td><p>Cursor, input nil the first time</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
 					</tr>
 				
 					<tr>
@@ -968,7 +1314,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Group blacklist<NSString></p>
+				<p>List and cursor</p>
 			</div>
 			
 
@@ -977,9 +1323,372 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get group‘s blacklist, required owner’s authority</p>
+				<p>Get the list of group members from the server</p>
+			</div>
+			
 
-<p>Synchronization method will block the current thread</p>
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupMemberListFromServerWithId:cursor:pageSize:completion:" title="getGroupMemberListFromServerWithId:cursor:pageSize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupMemberListFromServerWithId:cursor:pageSize:completion:">&ndash;&nbsp;getGroupMemberListFromServerWithId:cursor:pageSize:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the list of group members from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupMemberListFromServerWithId:(NSString *)<em>aGroupId</em> cursor:(NSString *)<em>aCursor</em> pageSize:(NSInteger)<em>aPageSize</em> completion:(void ( ^ ) ( EMCursorResult *aResult , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCursor</code></th>
+						<td><p>Cursor, input nil the first time</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the list of group members from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupBlacklistFromServerWithId:pageNumber:pageSize:error:" title="getGroupBlacklistFromServerWithId:pageNumber:pageSize:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupBlacklistFromServerWithId:pageNumber:pageSize:error:">&ndash;&nbsp;getGroupBlacklistFromServerWithId:pageNumber:pageSize:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the blacklist of group from the server, need owner / admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getGroupBlacklistFromServerWithId:(NSString *)<em>aGroupId</em> pageNumber:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageNum</code></th>
+						<td><p>Page number</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the blacklist of group from the server, need owner / admin permissions</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupBlacklistFromServerWithId:pageNumber:pageSize:completion:" title="getGroupBlacklistFromServerWithId:pageNumber:pageSize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupBlacklistFromServerWithId:pageNumber:pageSize:completion:">&ndash;&nbsp;getGroupBlacklistFromServerWithId:pageNumber:pageSize:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get group&rsquo;s blacklist, need owner / admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupBlacklistFromServerWithId:(NSString *)<em>aGroupId</em> pageNumber:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> completion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageNum</code></th>
+						<td><p>Page number</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get group&rsquo;s blacklist, need owner / admin permissions</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupMuteListFromServerWithId:pageNumber:pageSize:error:" title="getGroupMuteListFromServerWithId:pageNumber:pageSize:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupMuteListFromServerWithId:pageNumber:pageSize:error:">&ndash;&nbsp;getGroupMuteListFromServerWithId:pageNumber:pageSize:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the mutes of group  from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getGroupMuteListFromServerWithId:(NSString *)<em>aGroupId</em> pageNumber:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageNum</code></th>
+						<td><p>Page number</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the mutes of group  from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupMuteListFromServerWithId:pageNumber:pageSize:completion:" title="getGroupMuteListFromServerWithId:pageNumber:pageSize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupMuteListFromServerWithId:pageNumber:pageSize:completion:">&ndash;&nbsp;getGroupMuteListFromServerWithId:pageNumber:pageSize:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the mutes of group  from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupMuteListFromServerWithId:(NSString *)<em>aGroupId</em> pageNumber:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> completion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageNum</code></th>
+						<td><p>Page number</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the mutes of group  from the server</p>
 			</div>
 			
 
@@ -1077,6 +1786,79 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/addMembers:toGroup:message:completion:" title="addMembers:toGroup:message:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addMembers:toGroup:message:completion:">&ndash;&nbsp;addMembers:toGroup:message:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Invite User to join a group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addMembers:(NSArray *)<em>aUsers</em> toGroup:(NSString *)<em>aGroupId</em> message:(NSString *)<em>aMessage</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsers</code></th>
+						<td><p>Invited users</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Welcome message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Invite User to join a group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/removeOccupants:fromGroup:error:" title="removeOccupants:fromGroup:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/removeOccupants:fromGroup:error:">&ndash;&nbsp;removeOccupants:fromGroup:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -1135,6 +1917,74 @@
 				<p>Remove members from a group, required owner‘s authority</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeMembers:fromGroup:completion:" title="removeMembers:fromGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeMembers:fromGroup:completion:">&ndash;&nbsp;removeMembers:fromGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove members from a group, owner‘s authority is required</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeMembers:(NSArray *)<em>aUsers</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsers</code></th>
+						<td><p>Users to be removed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove members from a group, owner‘s authority is required</p>
 			</div>
 			
 
@@ -1227,6 +2077,74 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/blockMembers:fromGroup:completion:" title="blockMembers:fromGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/blockMembers:fromGroup:completion:">&ndash;&nbsp;blockMembers:fromGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add users to group blacklist, owner‘s authority is required</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)blockMembers:(NSArray *)<em>aMembers</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMembers</code></th>
+						<td><p>Users to be added</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add users to group blacklist, owner‘s authority is required</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/unblockOccupants:forGroup:error:" title="unblockOccupants:forGroup:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/unblockOccupants:forGroup:error:">&ndash;&nbsp;unblockOccupants:forGroup:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -1285,6 +2203,74 @@
 				<p>Remove users from group blacklist, required owner‘s authority</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unblockMembers:fromGroup:completion:" title="unblockMembers:fromGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unblockMembers:fromGroup:completion:">&ndash;&nbsp;unblockMembers:fromGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove users out of group blacklist, owner‘s authority is required</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unblockMembers:(NSArray *)<em>aMembers</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMembers</code></th>
+						<td><p>Users to be removed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove users out of group blacklist, owner‘s authority is required</p>
 			</div>
 			
 
@@ -1377,6 +2363,74 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/updateGroupSubject:forGroup:completion:" title="updateGroupSubject:forGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateGroupSubject:forGroup:completion:">&ndash;&nbsp;updateGroupSubject:forGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Change the group subject, owner‘s authority is required</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateGroupSubject:(NSString *)<em>aSubject</em> forGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSubject</code></th>
+						<td><p>New group‘s subject</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Change the group subject, owner‘s authority is required</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/changeDescription:forGroup:error:" title="changeDescription:forGroup:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/changeDescription:forGroup:error:">&ndash;&nbsp;changeDescription:forGroup:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -1452,6 +2506,74 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/updateDescription:forGroup:completion:" title="updateDescription:forGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateDescription:forGroup:completion:">&ndash;&nbsp;updateDescription:forGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Change the group description, owner‘s authority is required</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateDescription:(NSString *)<em>aDescription</em> forGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDescription</code></th>
+						<td><p>New group‘s description</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Change the group description, owner‘s authority is required</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/leaveGroup:error:" title="leaveGroup:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/leaveGroup:error:">&ndash;&nbsp;leaveGroup:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -1468,7 +2590,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (EMGroup *)leaveGroup:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)leaveGroup:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
 
 		    
 			
@@ -1490,11 +2612,6 @@
 			</div>
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Leaved group, return nil if fail</p>
-			</div>
 			
 
 			
@@ -1522,8 +2639,71 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/destroyGroup:error:" title="destroyGroup:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/destroyGroup:error:">&ndash;&nbsp;destroyGroup:error:</a></code>
+	<a name="//api/name/leaveGroup:completion:" title="leaveGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/leaveGroup:completion:">&ndash;&nbsp;leaveGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Leave a group, owner can&rsquo;t leave the group, can only destroy the group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)leaveGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Leave a group, owner can&rsquo;t leave the group, can only destroy the group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroyGroup:" title="destroyGroup:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroyGroup:">&ndash;&nbsp;destroyGroup:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -1538,7 +2718,72 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (EMGroup *)destroyGroup:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (EMError *)destroyGroup:(NSString *)<em>aGroupId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error, return nil if success</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Destroy a group, owner‘s authority is required</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroyGroup:finishCompletion:" title="destroyGroup:finishCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroyGroup:finishCompletion:">&ndash;&nbsp;destroyGroup:finishCompletion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Destroy a group, owner‘s authority is required</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)destroyGroup:(NSString *)<em>aGroupId</em> finishCompletion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1552,19 +2797,14 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>pError</code></th>
-						<td><p>Error</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
 			</div>
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Destroyed group, return nil if failed</p>
-			</div>
 			
 
 			
@@ -1573,8 +2813,6 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Destroy a group, owner‘s authority is required</p>
-
-<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -1662,6 +2900,69 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/blockGroup:completion:" title="blockGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/blockGroup:completion:">&ndash;&nbsp;blockGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Block group messages, server blocks the messages from the group, owner can&rsquo;t block the group&rsquo;s messages</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)blockGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Block group messages, server blocks the messages from the group, owner can&rsquo;t block the group&rsquo;s messages</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/unblockGroup:error:" title="unblockGroup:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/unblockGroup:error:">&ndash;&nbsp;unblockGroup:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -1713,6 +3014,798 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Unblock group messages</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unblockGroup:completion:" title="unblockGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unblockGroup:completion:">&ndash;&nbsp;unblockGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unblock group message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unblockGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Unblock group message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateGroupOwner:newOwner:error:" title="updateGroupOwner:newOwner:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateGroupOwner:newOwner:error:">&ndash;&nbsp;updateGroupOwner:newOwner:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Change group owner, need Owner permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)updateGroupOwner:(NSString *)<em>aGroupId</em> newOwner:(NSString *)<em>aNewOwner</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aNewOwner</code></th>
+						<td><p>New group owner</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Change group owner, need Owner permissions</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateGroupOwner:newOwner:completion:" title="updateGroupOwner:newOwner:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateGroupOwner:newOwner:completion:">&ndash;&nbsp;updateGroupOwner:newOwner:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Change group owner, need Owner permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateGroupOwner:(NSString *)<em>aGroupId</em> newOwner:(NSString *)<em>aNewOwner</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aNewOwner</code></th>
+						<td><p>New group owner</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Change group owner, need Owner permissions</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addAdmin:toGroup:error:" title="addAdmin:toGroup:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAdmin:toGroup:error:">&ndash;&nbsp;addAdmin:toGroup:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add group admin, need Owner permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)addAdmin:(NSString *)<em>aAdmin</em> toGroup:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aAdmin</code></th>
+						<td><p>Admin</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add group admin, need Owner permissions</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addAdmin:toGroup:completion:" title="addAdmin:toGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAdmin:toGroup:completion:">&ndash;&nbsp;addAdmin:toGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add group admin, need Owner permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAdmin:(NSString *)<em>aAdmin</em> toGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aAdmin</code></th>
+						<td><p>Admin</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add group admin, need Owner permissions</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeAdmin:fromGroup:error:" title="removeAdmin:fromGroup:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeAdmin:fromGroup:error:">&ndash;&nbsp;removeAdmin:fromGroup:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove group admin, need Owner permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)removeAdmin:(NSString *)<em>aAdmin</em> fromGroup:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aAdmin</code></th>
+						<td><p>Admin</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove group admin, need Owner permissions</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeAdmin:fromGroup:completion:" title="removeAdmin:fromGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeAdmin:fromGroup:completion:">&ndash;&nbsp;removeAdmin:fromGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove group admin, need Owner permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeAdmin:(NSString *)<em>aAdmin</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aAdmin</code></th>
+						<td><p>Admin</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove group admin, need Owner permissions</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/muteMembers:muteMilliseconds:fromGroup:error:" title="muteMembers:muteMilliseconds:fromGroup:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/muteMembers:muteMilliseconds:fromGroup:error:">&ndash;&nbsp;muteMembers:muteMilliseconds:fromGroup:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Mute group members, need Owner / Admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)muteMembers:(NSArray *)<em>aMuteMembers</em> muteMilliseconds:(NSInteger)<em>aMuteMilliseconds</em> fromGroup:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMuteMembers</code></th>
+						<td><p>The list of mute, type is <NSString></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMuteMilliseconds</code></th>
+						<td><p>Muted time duration in millisecond</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Mute group members, need Owner / Admin permissions</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/muteMembers:muteMilliseconds:fromGroup:completion:" title="muteMembers:muteMilliseconds:fromGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/muteMembers:muteMilliseconds:fromGroup:completion:">&ndash;&nbsp;muteMembers:muteMilliseconds:fromGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Mute group members, need Owner / Admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)muteMembers:(NSArray *)<em>aMuteMembers</em> muteMilliseconds:(NSInteger)<em>aMuteMilliseconds</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMuteMembers</code></th>
+						<td><p>The list of mute, type is <NSString></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMuteMilliseconds</code></th>
+						<td><p>Muted time duration in millisecond</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Mute group members, need Owner / Admin permissions</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unmuteMembers:fromGroup:error:" title="unmuteMembers:fromGroup:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unmuteMembers:fromGroup:error:">&ndash;&nbsp;unmuteMembers:fromGroup:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unmute group members, need Owner / Admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)unmuteMembers:(NSArray *)<em>aMembers</em> fromGroup:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMembers</code></th>
+						<td><p>The list of unmute, type is <NSString></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Unmute group members, need Owner / Admin permissions</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unmuteMembers:fromGroup:completion:" title="unmuteMembers:fromGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unmuteMembers:fromGroup:completion:">&ndash;&nbsp;unmuteMembers:fromGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unmute group members, need Owner / Admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unmuteMembers:(NSArray *)<em>aMembers</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMembers</code></th>
+						<td><p>The list of unmute, type is <NSString></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Unmute group members, need Owner / Admin permissions</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -1785,6 +3878,69 @@
 				<p>Join a public group, group style should be EMGroupStylePublicOpenJoin</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/joinPublicGroup:completion:" title="joinPublicGroup:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/joinPublicGroup:completion:">&ndash;&nbsp;joinPublicGroup:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Join a public group, group style should be EMGroupStylePublicOpenJoin</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)joinPublicGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Public group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Join a public group, group style should be EMGroupStylePublicOpenJoin</p>
 			</div>
 			
 
@@ -1877,6 +4033,74 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/requestToJoinPublicGroup:message:completion:" title="requestToJoinPublicGroup:message:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestToJoinPublicGroup:message:completion:">&ndash;&nbsp;requestToJoinPublicGroup:message:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Request to join a public group, group style should be EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)requestToJoinPublicGroup:(NSString *)<em>aGroupId</em> message:(NSString *)<em>aMessage</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Public group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Apply info</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Request to join a public group, group style should be EMGroupStylePublicJoinNeedApproval</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/acceptJoinApplication:applicant:" title="acceptJoinApplication:applicant:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/acceptJoinApplication:applicant:">&ndash;&nbsp;acceptJoinApplication:applicant:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -1930,6 +4154,74 @@
 				<p>Accept a group request, owner‘s authority is required</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/approveJoinGroupRequest:sender:completion:" title="approveJoinGroupRequest:sender:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/approveJoinGroupRequest:sender:completion:">&ndash;&nbsp;approveJoinGroupRequest:sender:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Approve a group request, owner‘s authority is required</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)approveJoinGroupRequest:(NSString *)<em>aGroupId</em> sender:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Group request sender</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Approve a group request, owner‘s authority is required</p>
 			</div>
 			
 
@@ -2022,6 +4314,79 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/declineJoinGroupRequest:sender:reason:completion:" title="declineJoinGroupRequest:sender:reason:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/declineJoinGroupRequest:sender:reason:completion:">&ndash;&nbsp;declineJoinGroupRequest:sender:reason:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decline a group request, owner‘s authority is required</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)declineJoinGroupRequest:(NSString *)<em>aGroupId</em> sender:(NSString *)<em>aUsername</em> reason:(NSString *)<em>aReason</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Group request sender</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aReason</code></th>
+						<td><p>Decline reason</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Decline a group request, owner‘s authority is required</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/acceptInvitationFromGroup:inviter:error:" title="acceptInvitationFromGroup:inviter:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/acceptInvitationFromGroup:inviter:error:">&ndash;&nbsp;acceptInvitationFromGroup:inviter:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -2080,6 +4445,74 @@
 				<p>Accept a group invitation</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acceptInvitationFromGroup:inviter:completion:" title="acceptInvitationFromGroup:inviter:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acceptInvitationFromGroup:inviter:completion:">&ndash;&nbsp;acceptInvitationFromGroup:inviter:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Accept a group invitation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)acceptInvitationFromGroup:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Inviter</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Accept a group invitation</p>
 			</div>
 			
 
@@ -2172,6 +4605,79 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/declineGroupInvitation:inviter:reason:completion:" title="declineGroupInvitation:inviter:reason:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/declineGroupInvitation:inviter:reason:completion:">&ndash;&nbsp;declineGroupInvitation:inviter:reason:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decline a group invitation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)declineGroupInvitation:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aInviter</em> reason:(NSString *)<em>aReason</em> completion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aInviter</code></th>
+						<td><p>Inviter</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aReason</code></th>
+						<td><p>Decline reason</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Decline a group invitation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/ignoreGroupPush:ignore:" title="ignoreGroupPush:ignore:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/ignoreGroupPush:ignore:">&ndash;&nbsp;ignoreGroupPush:ignore:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -2223,6 +4729,139 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Block / unblock group message‘s push notification</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updatePushServiceForGroup:isPushEnabled:completion:" title="updatePushServiceForGroup:isPushEnabled:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updatePushServiceForGroup:isPushEnabled:completion:">&ndash;&nbsp;updatePushServiceForGroup:isPushEnabled:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Block / unblock group message‘s push notification</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updatePushServiceForGroup:(NSString *)<em>aGroupID</em> isPushEnabled:(BOOL)<em>aIsEnable</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIsEnable</code></th>
+						<td><p>Whether enable</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Block / unblock group message‘s push notification</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getMyGroupsFromServerWithError:" title="getMyGroupsFromServerWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getMyGroupsFromServerWithError:">&ndash;&nbsp;getMyGroupsFromServerWithError:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all of user&rsquo;s groups from server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getMyGroupsFromServerWithError:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group list<a href="../Classes/EMGroup.html">EMGroup</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all of user&rsquo;s groups from server</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -2300,8 +4939,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getPublicGroupsFromServerWithCursor:pageSize:completion:" title="getPublicGroupsFromServerWithCursor:pageSize:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getPublicGroupsFromServerWithCursor:pageSize:completion:">&ndash;&nbsp;getPublicGroupsFromServerWithCursor:pageSize:completion:</a></code>
+	<a name="//api/name/fetchGroupInfo:includeMembersList:error:" title="fetchGroupInfo:includeMembersList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchGroupInfo:includeMembersList:error:">&ndash;&nbsp;fetchGroupInfo:includeMembersList:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -2311,80 +4950,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get public groups with the specified range from the server</p>
+				<p>Fetch group info</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)getPublicGroupsFromServerWithCursor:(NSString *)<em>aCursor</em> pageSize:(NSInteger)<em>aPageSize</em> completion:(void ( ^ ) ( EMCursorResult *aResult , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCursor</code></th>
-						<td><p>Cursor, input nil the first time</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aPageSize</code></th>
-						<td><p>Expect result count, return all results if count is less than zero</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get public groups with the specified range from the server</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/searchPublicGroupWithId:completion:" title="searchPublicGroupWithId:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/searchPublicGroupWithId:completion:">&ndash;&nbsp;searchPublicGroupWithId:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Search public group with group id</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)searchPublicGroupWithId:(NSString *)<em>aGroundId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)fetchGroupInfo:(NSString *)<em>aGroupId</em> includeMembersList:(BOOL)<em>aIncludeMembersList</em> error:(EMError **)<em>pError</em></code></div>
 
 		    
 			
@@ -2393,13 +4964,18 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aGroundId</code></th>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
 						<td><p>Group id</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<th scope="row" class="argument-name"><code>aIncludeMembersList</code></th>
+						<td><p>Whether to get member list，When YES, returns 200 members</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
 					</tr>
 				
 				</table>
@@ -2407,88 +4983,10 @@
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Search public group with group id</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
 			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/createGroupWithSubject:description:invitees:message:setting:completion:" title="createGroupWithSubject:description:invitees:message:setting:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/createGroupWithSubject:description:invitees:message:setting:completion:">&ndash;&nbsp;createGroupWithSubject:description:invitees:message:setting:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Create a group</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)createGroupWithSubject:(NSString *)<em>aSubject</em> description:(NSString *)<em>aDescription</em> invitees:(NSArray *)<em>aInvitees</em> message:(NSString *)<em>aMessage</em> setting:(EMGroupOptions *)<em>aSetting</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aSubject</code></th>
-						<td><p>Group subject</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDescription</code></th>
-						<td><p>Group description</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aInvitees</code></th>
-						<td><p>Group members, without creater</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aMessage</code></th>
-						<td><p>Invitation message</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aSetting</code></th>
-						<td><p>Group options</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
 			
 
 			
@@ -2496,7 +4994,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Create a group</p>
+				<p>Fetch group info</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -2540,7 +5040,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aIncludeMembersList</code></th>
-						<td><p>Whether to get member list</p></td>
+						<td><p>Whether to get member list，When YES, returns 200 members</p></td>
 					</tr>
 				
 					<tr>
@@ -2565,6 +5065,76 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Fetch group specification</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchGroupBansList:error:" title="fetchGroupBansList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchGroupBansList:error:">&ndash;&nbsp;fetchGroupBansList:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get group‘s blacklist, required owner’s authority</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)fetchGroupBansList:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group blacklist<NSString></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get group‘s blacklist, required owner’s authority</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -2645,8 +5215,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/addMembers:toGroup:message:completion:" title="addMembers:toGroup:message:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addMembers:toGroup:message:completion:">&ndash;&nbsp;addMembers:toGroup:message:completion:</a></code>
+	<a name="//api/name/destroyGroup:error:" title="destroyGroup:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroyGroup:error:">&ndash;&nbsp;destroyGroup:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -2656,425 +5226,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Invite User to join a group</p>
+				<p>Destroy a group, owner‘s authority is required</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)addMembers:(NSArray *)<em>aUsers</em> toGroup:(NSString *)<em>aGroupId</em> message:(NSString *)<em>aMessage</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsers</code></th>
-						<td><p>Invited users</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aMessage</code></th>
-						<td><p>Welcome message</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Invite User to join a group</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/removeMembers:fromGroup:completion:" title="removeMembers:fromGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/removeMembers:fromGroup:completion:">&ndash;&nbsp;removeMembers:fromGroup:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Remove members from a group, owner‘s authority is required</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)removeMembers:(NSArray *)<em>aUsers</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsers</code></th>
-						<td><p>Users to be removed</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Remove members from a group, owner‘s authority is required</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/blockMembers:fromGroup:completion:" title="blockMembers:fromGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/blockMembers:fromGroup:completion:">&ndash;&nbsp;blockMembers:fromGroup:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Add users to group blacklist, owner‘s authority is required</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)blockMembers:(NSArray *)<em>aMembers</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aMembers</code></th>
-						<td><p>Users to be added</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add users to group blacklist, owner‘s authority is required</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/unblockMembers:fromGroup:completion:" title="unblockMembers:fromGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/unblockMembers:fromGroup:completion:">&ndash;&nbsp;unblockMembers:fromGroup:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Remove users out of group blacklist, owner‘s authority is required</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)unblockMembers:(NSArray *)<em>aMembers</em> fromGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aMembers</code></th>
-						<td><p>Users to be removed</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Remove users out of group blacklist, owner‘s authority is required</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updateGroupSubject:forGroup:completion:" title="updateGroupSubject:forGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateGroupSubject:forGroup:completion:">&ndash;&nbsp;updateGroupSubject:forGroup:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Change the group subject, owner‘s authority is required</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)updateGroupSubject:(NSString *)<em>aSubject</em> forGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aSubject</code></th>
-						<td><p>New group‘s subject</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Change the group subject, owner‘s authority is required</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updateDescription:forGroup:completion:" title="updateDescription:forGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateDescription:forGroup:completion:">&ndash;&nbsp;updateDescription:forGroup:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Change the group description, owner‘s authority is required</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)updateDescription:(NSString *)<em>aDescription</em> forGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDescription</code></th>
-						<td><p>New group‘s description</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Change the group description, owner‘s authority is required</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/leaveGroup:completion:" title="leaveGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/leaveGroup:completion:">&ndash;&nbsp;leaveGroup:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Leave a group, owner can&rsquo;t leave the group, can only destroy the group</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)leaveGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)destroyGroup:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
 
 		    
 			
@@ -3088,8 +5245,8 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
 					</tr>
 				
 				</table>
@@ -3097,13 +5254,20 @@
 			
 
 			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Destroyed group, return nil if failed</p>
+			</div>
+			
 
 			
 
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Leave a group, owner can&rsquo;t leave the group, can only destroy the group</p>
+				<p>Destroy a group, owner‘s authority is required</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -3184,8 +5348,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/blockGroup:completion:" title="blockGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/blockGroup:completion:">&ndash;&nbsp;blockGroup:completion:</a></code>
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -3195,12 +5359,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Block group messages, server blocks the messages from the group, owner can&rsquo;t block the group&rsquo;s messages</p>
+				<p>Add delegate</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)blockGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMGroupManagerDelegate&gt;)<em>aDelegate</em></code></div>
 
 		    
 			
@@ -3209,13 +5373,8 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
 					</tr>
 				
 				</table>
@@ -3229,551 +5388,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Block group messages, server blocks the messages from the group, owner can&rsquo;t block the group&rsquo;s messages</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/unblockGroup:completion:" title="unblockGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/unblockGroup:completion:">&ndash;&nbsp;unblockGroup:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Unblock group message</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)unblockGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Unblock group message</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/joinPublicGroup:completion:" title="joinPublicGroup:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/joinPublicGroup:completion:">&ndash;&nbsp;joinPublicGroup:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Join a public group, group style should be EMGroupStylePublicOpenJoin</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)joinPublicGroup:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Public group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Join a public group, group style should be EMGroupStylePublicOpenJoin</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/requestToJoinPublicGroup:message:completion:" title="requestToJoinPublicGroup:message:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/requestToJoinPublicGroup:message:completion:">&ndash;&nbsp;requestToJoinPublicGroup:message:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Request to join a public group, group style should be EMGroupStylePublicJoinNeedApproval</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)requestToJoinPublicGroup:(NSString *)<em>aGroupId</em> message:(NSString *)<em>aMessage</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Public group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aMessage</code></th>
-						<td><p>Apply info</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Request to join a public group, group style should be EMGroupStylePublicJoinNeedApproval</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/approveJoinGroupRequest:sender:completion:" title="approveJoinGroupRequest:sender:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/approveJoinGroupRequest:sender:completion:">&ndash;&nbsp;approveJoinGroupRequest:sender:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Approve a group request, owner‘s authority is required</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)approveJoinGroupRequest:(NSString *)<em>aGroupId</em> sender:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>Group request sender</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Approve a group request, owner‘s authority is required</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/declineJoinGroupRequest:sender:reason:completion:" title="declineJoinGroupRequest:sender:reason:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/declineJoinGroupRequest:sender:reason:completion:">&ndash;&nbsp;declineJoinGroupRequest:sender:reason:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Decline a group request, owner‘s authority is required</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)declineJoinGroupRequest:(NSString *)<em>aGroupId</em> sender:(NSString *)<em>aUsername</em> reason:(NSString *)<em>aReason</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>Group request sender</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aReason</code></th>
-						<td><p>Decline reason</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Decline a group request, owner‘s authority is required</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/acceptInvitationFromGroup:inviter:completion:" title="acceptInvitationFromGroup:inviter:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/acceptInvitationFromGroup:inviter:completion:">&ndash;&nbsp;acceptInvitationFromGroup:inviter:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Accept a group invitation</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)acceptInvitationFromGroup:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>Inviter</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>groupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Accept a group invitation</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/declineGroupInvitation:inviter:reason:completion:" title="declineGroupInvitation:inviter:reason:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/declineGroupInvitation:inviter:reason:completion:">&ndash;&nbsp;declineGroupInvitation:inviter:reason:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Decline a group invitation</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)declineGroupInvitation:(NSString *)<em>aGroupId</em> inviter:(NSString *)<em>aInviter</em> reason:(NSString *)<em>aReason</em> completion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aInviter</code></th>
-						<td><p>Inviter</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aReason</code></th>
-						<td><p>Decline reason</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Decline a group invitation</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updatePushServiceForGroup:isPushEnabled:completion:" title="updatePushServiceForGroup:isPushEnabled:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updatePushServiceForGroup:isPushEnabled:completion:">&ndash;&nbsp;updatePushServiceForGroup:isPushEnabled:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Block / unblock group message‘s push notification</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)updatePushServiceForGroup:(NSString *)<em>aGroupID</em> isPushEnabled:(BOOL)<em>aIsEnable</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aIsEnable</code></th>
-						<td><p>Whether enable</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Add delegate</p>
 			</div>
 			
 
@@ -5622,7 +7237,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-12-30</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-05-03</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
